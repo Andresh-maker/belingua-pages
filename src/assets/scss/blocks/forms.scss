@@ -1,0 +1,22 @@
+.main-screen__forms {
+  form.forms-language {
+    .forms-language__group {
+      input#forms-language__original.forms-language__original {}
+      label {}
+    }
+    .forms-language__group {
+      input#forms-language__translation.forms-language__translation {}
+      label {}
+    }
+    .forms-language__group {
+      select#forms-language__view.forms-language__view {
+        option {}
+      }
+      label {}
+    }
+    .forms-language__group {
+      input#forms-language__location.language__location {}
+      label {}
+    }
+  }
+}
