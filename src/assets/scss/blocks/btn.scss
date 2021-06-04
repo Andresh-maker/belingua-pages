@@ -1,0 +1,15 @@
+.btn{
+  background: $act;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  .small{
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+}
