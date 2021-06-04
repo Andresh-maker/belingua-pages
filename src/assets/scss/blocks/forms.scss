@@ -7,8 +7,28 @@ form.forms-language {
     max-width: 321px;
     width: 100%;
     position: relative;
-    margin: 8px 8px 0px 0px;
+    margin: 8px 8px 0 0;
     overflow: hidden;
+
+    &.dropdown-group{
+      position: relative;
+      input{
+        &.dropdown{
+          padding-left: 12px;
+        }
+        &.dropdown + label{
+          left: 12px;
+        }
+      }
+
+      i.dropdown{
+        content: '-';
+        position: absolute;
+        right: 12px;
+        top: 25px;
+        cursor: pointer;
+      }
+    }
 
     &:nth-child(even) {
       margin-right: 0;
@@ -16,7 +36,7 @@ form.forms-language {
 
     i.Aa, i.union, i.location {
       position: absolute;
-      top: 40%;
+      top: 38%;
       left: 14px;
     }
 
@@ -33,12 +53,6 @@ form.forms-language {
         top: 7px;
         color: $grey-4;
         font-size: 13px;
-      }
-      &.dropdown{
-        padding-left: 12px;
-      }
-      &.dropdown + label{
-        left: 12px;
       }
     }
     label {

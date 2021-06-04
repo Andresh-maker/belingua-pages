@@ -17,3 +17,10 @@ i.location {
   background: url("../images/input/icon_20_pin.svg") no-repeat center;
   background-size: cover;
 }
+i.dropdown {
+  width: 14px;
+  height: 7px;
+  z-index: 2;
+  background: url("../images/input/dropdown.svg") no-repeat center;
+  background-size: cover;
+}
