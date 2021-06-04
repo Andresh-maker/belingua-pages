@@ -381,6 +381,10 @@ textarea {
   font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Inter, sans-serif;
     font-weight: 400;
@@ -394,14 +398,11 @@ body h1 {
     max-width: 1224px;
     width: 100%;
     margin: 0 auto;
-    height: 100%;
-    min-height: 100%;
 }
 
 .row {
     display: -ms-flexbox;
     display: flex;
-    height: inherit;
 }
 
 .row.wrap {
@@ -415,8 +416,6 @@ body h1 {
 }
 
 .page {
-    display: grid;
-    grid-template-rows: 80px 1fr auto;
     min-height: 100vh;
     position: relative;
 }
@@ -441,10 +440,22 @@ h1 {
     border: none;
 }
 
-.btn .small {
+.btn.white {
+    background: #EEEFF1;
+}
+
+.btn.small {
     border-radius: 4px;
     padding: 8px 16px;
     font-size: 15px;
+}
+
+.btn.big {
+    padding: 18px 32px;
+    max-width: 211px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 4px;
 }
 
 i.Aa {
@@ -469,17 +480,34 @@ i.location {
     background-size: cover;
 }
 
+i.dropdown {
+    width: 14px;
+    height: 7px;
+    z-index: 2;
+    background: url("../images/input/dropdown.svg") no-repeat center;
+    background-size: cover;
+}
+
 header#header {
     background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header#header .container {
     position: relative;
 }
 
-header#header:after {
+header#header .container:after {
     content: '';
-    max-width: 1224px;
     width: 100%;
     height: 1px;
-    background: #00113D;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 17, 61, 0.08);
 }
 
 header#header .header__logo {
@@ -548,9 +576,17 @@ header#header .header__actions .create-order button {
 }
 
 .main-screen {
-    height: 764px;
+    height: 100vh;
     background: #E8F3F8;
     overflow: hidden;
+}
+
+.main-screen .container {
+    height: inherit;
+}
+
+.main-screen .container > .row {
+    height: inherit;
 }
 
 .main-screen .main-screen__left {
@@ -572,6 +608,23 @@ header#header .header__actions .create-order button {
     font-size: 21px;
     color: #3F4350;
     line-height: 28px;
+}
+
+.main-screen .main-screen__left .main-screen__forms {
+    margin-top: 48px;
+}
+
+.main-screen .main-screen__left .main-screen__btn {
+    margin-top: 16px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.main-screen .main-screen__left .main-screen__btn .btn.white {
+    max-width: 171px;
+    width: 100%;
+    margin-left: 16px;
+    color: #3F4350;
 }
 
 .main-screen .main-screen__right {
@@ -604,8 +657,28 @@ form.forms-language .forms-language__group {
     max-width: 321px;
     width: 100%;
     position: relative;
-    margin: 8px 8px 0px 0px;
+    margin: 8px 8px 0 0;
     overflow: hidden;
+}
+
+form.forms-language .forms-language__group.dropdown-group {
+    position: relative;
+}
+
+form.forms-language .forms-language__group.dropdown-group input.dropdown {
+    padding-left: 12px;
+}
+
+form.forms-language .forms-language__group.dropdown-group input.dropdown + label {
+    left: 12px;
+}
+
+form.forms-language .forms-language__group.dropdown-group i.dropdown {
+    content: '-';
+    position: absolute;
+    right: 12px;
+    top: 25px;
+    cursor: pointer;
 }
 
 form.forms-language .forms-language__group:nth-child(even) {
@@ -614,7 +687,7 @@ form.forms-language .forms-language__group:nth-child(even) {
 
 form.forms-language .forms-language__group i.Aa, form.forms-language .forms-language__group i.union, form.forms-language .forms-language__group i.location {
     position: absolute;
-    top: 40%;
+    top: 38%;
     left: 14px;
 }
 
@@ -632,14 +705,6 @@ form.forms-language .forms-language__group input:focus + label {
     top: 7px;
     color: #525962;
     font-size: 13px;
-}
-
-form.forms-language .forms-language__group input.dropdown {
-    padding-left: 12px;
-}
-
-form.forms-language .forms-language__group input.dropdown + label {
-    left: 12px;
 }
 
 form.forms-language .forms-language__group label {
