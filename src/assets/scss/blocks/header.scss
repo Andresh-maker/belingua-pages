@@ -1,6 +1,6 @@
 header#header {
   background: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -35,7 +35,7 @@ header#header {
           color: $grey-1;
           text-decoration: none;
           &:hover{
-            color: $act;
+            color: $primary;
           }
         }
       }
@@ -51,23 +51,8 @@ header#header {
         text-decoration: none;
         margin-right: 24px;
         &:hover{
-          color: $act;
+          color: $primary;
         }
-      }
-    }
-    .create-order {
-      button {
-        background: $act;
-        padding: 8px 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: $text-color;
-        border-radius: 4px;
-        box-shadow: none;
-        outline: none;
-        border: none;
-        font-size: 15px;
       }
     }
   }

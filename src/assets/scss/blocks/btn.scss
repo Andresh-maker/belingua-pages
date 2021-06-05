@@ -1,25 +1,53 @@
 .btn{
-  background: $act;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $text-color;
   box-shadow: none;
   outline: none;
   border: none;
-  &.white{
-    background: $act2;
+  transition: all 0.2s linear;
+  border-radius: 4px;
+  &.secondary{
+    background: $secondary;
+    color: $grey-2;
+    &:hover{
+      background: #F4F5F6;
+    }
+    &:active{
+      background: #E9EBED;
+    }
   }
+  &.primary{
+    background: $primary;
+    color: $text-color;
+    &:hover{
+      background: #615DD0;
+    }
+    &:active{
+      background: #4D49D0;
+    }
+  }
+  &.tertiary{
+    background: $tertiary;
+    color: $grey-2;
+    &:hover{
+      color: #5753D0;
+    }
+    &:active{
+      color: #4D49D0;
+    }
+  }
+
   &.small{
-    border-radius: 4px;
     padding: 8px 16px;
     font-size: 15px;
   }
+  &.medium{
+    padding: 12px 24px;
+    width: 195px;
+  }
   &.big{
     padding: 18px 32px;
-    max-width: 211px;
-    width: 100%;
     font-size: 15px;
-    border-radius: 4px;
   }
 }
