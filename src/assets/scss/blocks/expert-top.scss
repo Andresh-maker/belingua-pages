@@ -1,0 +1,84 @@
+.expert-top {
+  background: #F6FAFE;
+  padding: 120px 0;
+  .expert-top__title {
+    text-align: center;
+    h2.expert-top__h2 {
+      color: $grey-1;
+      font-weight: 600;
+      font-size: 40px;
+    }
+  }
+  .expert {
+    margin: 70px 0;
+    .expert__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 288px);
+      grid-template-rows: minmax(400px, auto);
+      grid-gap: 24px;
+      .expert__item {
+        position: relative;
+        top: 0;
+        background: #ffffff;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: all 0.2s linear;
+        &:hover{
+          top: -8px;
+          box-shadow: 0 4px 8px -2px rgba(0, 17, 61, 0.08);
+        }
+        .expert__header {
+          position: relative;
+          height: 200px;
+          img.expert__image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            z-index: 1;
+          }
+          .expert__rating{
+            display: flex;
+            align-items: flex-start;
+            position: absolute;
+            bottom: 23px;
+            left: 19px;
+            z-index: 2;
+            .rating-text{
+              margin-left: 4px;
+              color: $text-color;
+              font-size: 13px;
+            }
+          }
+        }
+        .expert-top__middle {
+          padding: 19px 24px;
+          a.expert__link {
+            text-decoration: none;
+            color: $grey-1;
+            font-size: 19px;
+            font-weight: 600;
+            &:hover{
+              color: $primary;
+            }
+          }
+          span.expert__location {
+            display: block;
+            width: 100%;
+            color: $grey-3;
+            font-size: 15px;
+            margin-top: 4px;
+          }
+        }
+        .expert-top__footer {
+          padding: 0px 24px 19px;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
