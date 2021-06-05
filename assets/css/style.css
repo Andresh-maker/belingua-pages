@@ -427,35 +427,71 @@ h1 {
 }
 
 .btn {
-    background: #5753D0;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
-    color: white;
     box-shadow: none;
     outline: none;
     border: none;
+    transition: all 0.2s linear;
+    border-radius: 4px;
 }
 
-.btn.white {
+.btn.secondary {
     background: #EEEFF1;
+    color: #3F4350;
+}
+
+.btn.secondary:hover {
+    background: #F4F5F6;
+}
+
+.btn.secondary:active {
+    background: #E9EBED;
+}
+
+.btn.primary {
+    background: #5753D0;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #615DD0;
+}
+
+.btn.primary:active {
+    background: #4D49D0;
+}
+
+.btn.tertiary {
+    background: transparent;
+    color: #3F4350;
+}
+
+.btn.tertiary:hover {
+    color: #5753D0;
+}
+
+.btn.tertiary:active {
+    color: #4D49D0;
 }
 
 .btn.small {
-    border-radius: 4px;
     padding: 8px 16px;
     font-size: 15px;
 }
 
+.btn.medium {
+    padding: 12px 24px;
+    width: 195px;
+}
+
 .btn.big {
     padding: 18px 32px;
-    max-width: 211px;
-    width: 100%;
     font-size: 15px;
-    border-radius: 4px;
 }
 
 i.Aa {
@@ -488,9 +524,25 @@ i.dropdown {
     background-size: cover;
 }
 
+i.rating {
+    width: 12px;
+    height: 12px;
+    z-index: 2;
+    background: url("../images/rating.svg") no-repeat center;
+    background-size: cover;
+}
+
+i.double-sided.arrow {
+    width: 20px;
+    height: 6px;
+    z-index: 2;
+    background: url("../images/double-sided.svg") no-repeat center;
+    background-size: cover;
+}
+
 header#header {
     background: transparent;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -558,23 +610,6 @@ header#header .header__actions .enter a:hover {
     color: #5753D0;
 }
 
-header#header .header__actions .create-order button {
-    background: #5753D0;
-    padding: 8px 16px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: white;
-    border-radius: 4px;
-    box-shadow: none;
-    outline: none;
-    border: none;
-    font-size: 15px;
-}
-
 .main-screen {
     height: 100vh;
     background: #E8F3F8;
@@ -620,7 +655,7 @@ header#header .header__actions .create-order button {
     display: flex;
 }
 
-.main-screen .main-screen__left .main-screen__btn .btn.white {
+.main-screen .main-screen__left .main-screen__btn .btn.secondary {
     max-width: 171px;
     width: 100%;
     margin-left: 16px;
@@ -721,4 +756,184 @@ form.forms-language .forms-language__group label.active {
     top: 7px;
     color: #525962;
     font-size: 13px;
+}
+
+.expert-top {
+    background: #F6FAFE;
+    padding: 120px 0;
+}
+
+.expert-top .expert-top__title {
+    text-align: center;
+}
+
+.expert-top .expert-top__title h2.expert-top__h2 {
+    color: #030F30;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.expert-top .expert {
+    margin: 70px 0;
+}
+
+.expert-top .expert .expert__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 288px);
+    grid-template-rows: minmax(400px, auto);
+    grid-gap: 24px;
+}
+
+.expert-top .expert .expert__list .expert__item {
+    position: relative;
+    top: 0;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.2s linear;
+}
+
+.expert-top .expert .expert__list .expert__item:hover {
+    top: -8px;
+    box-shadow: 0 4px 8px -2px rgba(0, 17, 61, 0.08);
+}
+
+.expert-top .expert .expert__list .expert__item .expert__header {
+    position: relative;
+    height: 200px;
+}
+
+.expert-top .expert .expert__list .expert__item .expert__header img.expert__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    z-index: 1;
+}
+
+.expert-top .expert .expert__list .expert__item .expert__header .expert__rating {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 23px;
+    left: 19px;
+    z-index: 2;
+}
+
+.expert-top .expert .expert__list .expert__item .expert__header .expert__rating .rating-text {
+    margin-left: 4px;
+    color: white;
+    font-size: 13px;
+}
+
+.expert-top .expert .expert__list .expert__item .expert-top__middle {
+    padding: 19px 24px;
+}
+
+.expert-top .expert .expert__list .expert__item .expert-top__middle a.expert__link {
+    text-decoration: none;
+    color: #030F30;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.expert-top .expert .expert__list .expert__item .expert-top__middle a.expert__link:hover {
+    color: #5753D0;
+}
+
+.expert-top .expert .expert__list .expert__item .expert-top__middle span.expert__location {
+    display: block;
+    width: 100%;
+    color: #80868E;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.expert-top .expert .expert__list .expert__item .expert-top__footer {
+    padding: 0px 24px 19px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.translate-tag {
+    margin: 3px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 4px 12px 4px 4px;
+    background: #F7F7F8;
+    border-radius: 100px;
+}
+
+.translate-tag .translate__images {
+    width: 45px;
+    height: 24px;
+    position: relative;
+}
+
+.translate-tag .translate__images .translate-tag__from_image {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    top: 0;
+}
+
+.translate-tag .translate__images .translate-tag__to_image {
+    border-left: 3px solid #F7F7F8;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    z-index: 4;
+    left: 18px;
+    top: 0;
+}
+
+.translate-tag .translate__images img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.translate-tag .translate__text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.translate-tag .translate__text span {
+    color: #636B75;
+    font-size: 13px;
+    margin: 0 4px;
+}
+
+.translate-tag .translate__text i.double-sided.arrow {
+    display: block;
+    width: 20px;
+    height: 6px;
+    margin: 0 4px;
+}
+
+.view-tag {
+    margin: 3px 0;
+    padding: 8px 12px;
+    background: #F7F7F8;
+    border-radius: 100px;
+    font-size: 13px;
+    color: #636B75;
 }
