@@ -1,6 +1,6 @@
 .expert-top {
   background: #F6FAFE;
-  padding: 120px 0;
+  padding-top: 120px;
   .expert-top__title {
     text-align: center;
     h2.expert-top__h2 {
@@ -15,7 +15,10 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, 288px);
       grid-template-rows: minmax(400px, auto);
+      grid-auto-rows: minmax(400px, auto);
+      grid-auto-columns: 288px;
       grid-gap: 24px;
+      grid-auto-flow: dense;
       .expert__item {
         position: relative;
         top: 0;
@@ -79,6 +82,14 @@
           flex-wrap: wrap;
         }
       }
+    }
+  }
+  .expert-top__button{
+    display: flex;
+    justify-content: center;
+    i.next{
+      display: block;
+      margin-left: 12px;
     }
   }
 }

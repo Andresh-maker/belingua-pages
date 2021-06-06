@@ -1,6 +1,10 @@
 @import 'vendor/reset';
 @import 'vendor/font';
 @import '_vars';
+@import '_mixins';
+@import 'blocks/text';
+
+
 *{
   box-sizing: border-box;
 }
@@ -9,14 +13,17 @@ body {
   font-weight: 400;
 }
 
-body h1{
-  font-weight: 700;
-}
-
 .container{
   max-width: $container;
   width: 100%;
   margin: 0 auto;
+  @include breakpoint($tablet-bp){
+    max-width: $tablet-bp;
+  }
+  @include breakpoint($mobile-bp){
+    padding: 0 15px;
+    max-width: $mobile-bp;
+  }
 }
 .row{
   display: flex;
@@ -36,3 +43,6 @@ body h1{
 @import 'blocks/forms';
 @import 'blocks/expert-top';
 @import 'blocks/tags';
+@import 'blocks/category-top';
+@import 'blocks/find-translator';
+@import 'blocks/slider';

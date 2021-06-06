@@ -1,5 +1,5 @@
 .btn{
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   box-shadow: none;
@@ -7,6 +7,9 @@
   border: none;
   transition: all 0.2s linear;
   border-radius: 4px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
   &.secondary{
     background: $secondary;
     color: $grey-2;

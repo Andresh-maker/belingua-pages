@@ -5,6 +5,10 @@
   padding: 4px 12px 4px 4px;
   background: #F7F7F8;
   border-radius: 100px;
+  transition: all 0.1s linear;
+  &:hover{
+    background: #EEF0F1;
+  }
   .translate__images {
     width: 45px;
     height: 24px;
@@ -57,4 +61,8 @@
   border-radius: 100px;
   font-size: 13px;
   color: #636B75;
+  transition: all 0.1s linear;
+  &:hover{
+    background: #EEF0F1;
+  }
 }

@@ -2,7 +2,6 @@
   height: 100vh;
   background: #E8F3F8;
   overflow: hidden;
-
   .container {
     height: inherit;
 
@@ -41,10 +40,7 @@
       margin-top: 16px;
       display: flex;
       & .btn.secondary{
-        max-width: 171px;
-        width: 100%;
         margin-left: 16px;
-        color: $grey-2;
       }
     }
   }
