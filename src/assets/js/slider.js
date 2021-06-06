@@ -11,6 +11,7 @@ const sliderInfo = new Swiper('.slider__info', {
     slidesPerGroup: 1,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    cssMode: true,
 });
 
 const sliderContent = new Swiper('.slider__content', {
@@ -20,7 +21,6 @@ const sliderContent = new Swiper('.slider__content', {
     slideClass: 'slider__content_item',
     slidesPerView: 1,
     loop: true,
-    // centeredSlides: true,
     autoHeight: true,
     thumbs: {
         swiper: sliderInfo,
@@ -39,10 +39,8 @@ function timerSlider(elem) {
     let progress = elem.querySelector('.slider__info_item.active .slider__progress')
     let time = .1;
     let percentTime = 0
-    // document.querySelectorAll('.slider__progress').style.height = 0 + '%'
     elem.querySelectorAll('.slider__progress').forEach(item => item.style.height = "")
     clearInterval(tick)
-    console.log(elem.querySelector('.slider__info_item'))
 
     tick = setInterval(() => {
         if (percentTime <= 100){

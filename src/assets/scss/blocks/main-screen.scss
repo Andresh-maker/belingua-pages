@@ -1,9 +1,11 @@
 .main-screen {
-  height: 100vh;
+  padding-top: 90px;
+  height: 80vh;
+  min-height: 600px;
   background: #E8F3F8;
   overflow: hidden;
   .container {
-    height: inherit;
+    height: 100%;
 
     > .row {
       height: inherit;
