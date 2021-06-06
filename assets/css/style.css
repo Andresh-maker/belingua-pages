@@ -770,6 +770,7 @@ form.forms-language .forms-language__group input {
     border: none;
     font-size: 15px;
     position: relative;
+    padding-top: 11px;
 }
 
 form.forms-language .forms-language__group input:focus + label {
@@ -856,6 +857,9 @@ form.forms-language .forms-language__group label.active {
 }
 
 .expert-top .expert .expert__list .expert__item .expert__header .expert__rating {
+    background: rgba(0, 14, 51, 0.08);
+    border-radius: 4px;
+    padding: 8px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: start;
