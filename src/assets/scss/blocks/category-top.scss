@@ -35,7 +35,17 @@
 
       .category-top__content {
         margin-top: 24px;
-
+        .category-top__link{
+          text-decoration: none;
+          color: $grey-1;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+          &:hover{
+            color: $primary;
+          }
+        }
       }
 
       .category-top__footer {

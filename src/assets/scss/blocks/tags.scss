@@ -6,6 +6,8 @@
   background: #F7F7F8;
   border-radius: 100px;
   transition: all 0.1s linear;
+  text-decoration: none;
+  cursor: pointer;
   &:hover{
     background: #EEF0F1;
   }
@@ -55,6 +57,7 @@
   }
 }
 .view-tag {
+  cursor: pointer;
   margin: 3px 0;
   padding: 8px 12px;
   background: #F7F7F8;
@@ -62,6 +65,7 @@
   font-size: 13px;
   color: #636B75;
   transition: all 0.1s linear;
+  text-decoration: none;
   &:hover{
     background: #EEF0F1;
   }
