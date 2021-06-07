@@ -1406,3 +1406,76 @@ form.forms-language .forms-language__group label.active {
     color: #80868E;
     margin-left: 4px;
 }
+
+.article-top {
+    padding: 72px;
+}
+
+.article-top .container .article-top__title .article-top__h2 {
+    text-align: center;
+}
+
+.article-top .container .article-top__list {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 376px);
+    grid-template-rows: auto;
+    grid-gap: 47px;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__header {
+    position: relative;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__header .article-top__link_header {
+    display: block;
+    text-decoration: none;
+    height: 207px;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__header .article-top__link_header .article-top__image {
+    border-radius: 8px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__header .article-top__link_header .article-top__time {
+    position: absolute;
+    padding: 6px 8px;
+    bottom: 12px;
+    left: 21px;
+    background: rgba(0, 14, 51, 0.08);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: white;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__content {
+    margin-top: 24px;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__content .article-top__link_content {
+    color: #030F30;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.article-top .container .article-top__list .article-top__item .article-top__content .article-top__link_content:hover {
+    color: #5753D0;
+}
+
+footer {
+    z-index: 1;
+    margin-top: -10px;
+    background: linear-gradient(1.22deg, #E0F0F5 49.63%, #FFFFFF 98.96%);
+    padding-top: 72px;
+}
