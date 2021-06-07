@@ -400,7 +400,11 @@ main h3 {
     color: #030F30;
 }
 
-* {
+main a {
+    text-decoration: none;
+}
+
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
@@ -650,13 +654,15 @@ header#header .header__actions .enter a:hover {
 }
 
 .main-screen {
-    height: 100vh;
+    padding-top: 90px;
+    height: 80vh;
+    min-height: 600px;
     background: #E8F3F8;
     overflow: hidden;
 }
 
 .main-screen .container {
-    height: inherit;
+    height: 100%;
 }
 
 .main-screen .container > .row {
@@ -885,18 +891,20 @@ form.forms-language .forms-language__group label.active {
     color: #030F30;
     font-size: 19px;
     font-weight: 600;
+    line-height: 24px;
 }
 
 .expert-top .expert .expert__list .expert__item .expert-top__middle a.expert__link:hover {
     color: #5753D0;
 }
 
-.expert-top .expert .expert__list .expert__item .expert-top__middle span.expert__location {
+.expert-top .expert .expert__list .expert__item .expert-top__middle .expert__location {
     display: block;
     width: 100%;
     color: #80868E;
     font-size: 15px;
     margin-top: 4px;
+    line-height: 24px;
 }
 
 .expert-top .expert .expert__list .expert__item .expert-top__footer {
@@ -929,6 +937,8 @@ form.forms-language .forms-language__group label.active {
     background: #F7F7F8;
     border-radius: 100px;
     transition: all 0.1s linear;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .translate-tag:hover {
@@ -990,6 +1000,7 @@ form.forms-language .forms-language__group label.active {
 }
 
 .view-tag {
+    cursor: pointer;
     margin: 3px 0;
     padding: 8px 12px;
     background: #F7F7F8;
@@ -997,6 +1008,7 @@ form.forms-language .forms-language__group label.active {
     font-size: 13px;
     color: #636B75;
     transition: all 0.1s linear;
+    text-decoration: none;
 }
 
 .view-tag:hover {
@@ -1048,6 +1060,19 @@ form.forms-language .forms-language__group label.active {
 
 .category-top .category-top__list .category-top__item .category-top__content {
     margin-top: 24px;
+}
+
+.category-top .category-top__list .category-top__item .category-top__content .category-top__link {
+    text-decoration: none;
+    color: #030F30;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.category-top .category-top__list .category-top__item .category-top__content .category-top__link:hover {
+    color: #5753D0;
 }
 
 .category-top .category-top__list .category-top__item .category-top__footer {
@@ -1172,4 +1197,212 @@ form.forms-language .forms-language__group label.active {
 .find-translator .container .slider .slider__content .slider__content_item .slider__image img {
     width: 100%;
     height: auto;
+}
+
+.service-top {
+    padding: 72px 0;
+}
+
+.service-top .container .service-top__title {
+    text-align: center;
+}
+
+.service-top .container .service-top__list {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: 480px 247px 480px;
+    grid-template-rows: 266px;
+    grid-auto-columns: 480px 247px 480px;
+    grid-auto-rows: 266px;
+    grid-gap: 24px;
+}
+
+.service-top .container .service-top__list .service-top__item {
+    overflow: hidden;
+    background: #EEF5FC;
+    border-radius: 8px;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 32px;
+    position: relative;
+}
+
+.service-top .container .service-top__list .service-top__item.big.left {
+    grid-column: 1 / 3;
+}
+
+.service-top .container .service-top__list .service-top__item.big.right {
+    grid-column: 2 / 4;
+}
+
+.service-top .container .service-top__list .service-top__item.small.left {
+    grid-column: 1 / 2;
+}
+
+.service-top .container .service-top__list .service-top__item.small.right {
+    grid-column: 3 / 4;
+}
+
+.service-top .container .service-top__list .service-top__item.primary {
+    background: linear-gradient(82.23deg, #5C87FF 0%, #6F83E7 65.61%, #6A6AE2 100%);
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__left {
+    z-index: 2;
+    width: 60%;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__left.full {
+    width: 100%;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__left .service-top__h3 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    color: #030F30;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__left .service-top__text {
+    color: #3F4350;
+    margin-top: 16px;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__left.primary .service-top__h3, .service-top .container .service-top__list .service-top__item .service-top__left.primary .service-top__text {
+    color: white;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__right.glob {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__right.check {
+    margin-left: auto;
+}
+
+.service-top .container .service-top__list .service-top__item .service-top__right img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: bottom;
+    object-position: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews-top {
+    padding: 72px 0;
+}
+
+.reviews-top .reviews-top__list {
+    margin-top: 72px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 24px 36px;
+    background: #F7F7F8;
+    border-radius: 8px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__group {
+    border-left: 1px solid #D7DADE;
+    padding-left: 11px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__group .reviews-top__header .reviews-top__name {
+    display: block;
+    text-decoration: none;
+    color: #030F30;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__group .reviews-top__header .reviews-top__specialty {
+    color: #525962;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__group .reviews-top__content {
+    margin: 32px 0;
+    padding: 8px 12px;
+    background: #EEF5FC;
+    border-radius: 0px 8px 8px 8px;
+    color: #3F4350;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__image {
+    margin-right: 9px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__image img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__text .reviews-top__specialist {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 2px;
+    color: #030F30;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__text .reviews-top__specialist:hover {
+    color: #5753D0;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__text .reviews-top__rating {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__text .reviews-top__rating .rating__item {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    color: #030F30;
+    margin-left: 4px;
+}
+
+.reviews-top .reviews-top__list .reviews-top__item .reviews-top__footer .reviews-top__text .reviews-top__rating .rating__count {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #80868E;
+    margin-left: 4px;
 }
