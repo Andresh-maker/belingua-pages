@@ -69,15 +69,12 @@
         .service-top__right {
           &.glob{
             position: absolute;
-            width: 247px;
-            height: 247px;
             bottom: 0;
             right: 0;
             z-index: 1;
           }
           &.check{
             margin-left: auto;
-
           }
 
           img {
