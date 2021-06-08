@@ -49,7 +49,7 @@ form.forms-language {
       font-size: 15px;
       position: relative;
       padding-top: 11px;
-
+      transition: all 80ms linear;
       &:focus + label {
         top: 7px;
         color: $grey-4;
