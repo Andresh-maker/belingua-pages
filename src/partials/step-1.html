@@ -1,0 +1,77 @@
+<div class="step-element" id="step-1">
+    <div class="step-element__count">1 из 3</div>
+    <h3 class="step-element__title">Укажите детали перевода</h3>
+    <form action="#" class="form-step">
+        <div class="form-step__group">
+            <i class="Aa"></i>
+            <label for="form-step__original">Язык оригинала</label>
+            <input id="form-step__original" type="text" name="form-step__original"
+                   class="form-step__original"/>
+        </div>
+        <div class="form-step__group">
+            <i class="union"></i>
+            <label for="form-step__translation">Язык перевода</label>
+            <input id="form-step__translation" type="text" name="form-step__translation"
+                   class="form-step__translation"/>
+        </div>
+
+        <div class="form-step__tabs">
+            <div class="form-step__tab active">Устный перевод</div>
+            <div class="form-step__tab">Письменный перевод</div>
+        </div>
+
+        <div class="form-step__content">
+            <div class="form-step_label">Метод перевода</div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="1"/>
+                <label for="1">Последовательный перевод</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="2"/>
+                <label for="2">Синхронный перевод</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="3"/>
+                <label for="3">Шушутаж</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="4"/>
+                <label for="4">Аудио-визуальный перевод</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="5"/>
+                <label for="5">Гид-переводчик</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="6"/>
+                <label for="6">Сурдоперевод</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="7"/>
+                <input class="other" type="text" placeholder="Другой">
+            </div>
+
+        </div>
+
+        <div class="form-step__group">
+            <label for="form-step__subjects">Тематики перевода</label>
+            <input id="form-step__subjects" placeholder="Например, медицина" type="text" name="form-step__subjects"
+                   class="form-step__subjects not_icon"/>
+        </div>
+    </form>
+</div>
+<div class="step-element__btn">
+    <a href="/" class="btn tertiary big">
+        Вернуться на главную
+    </a>
+    <button type="button" class="btn primary big next">
+        К следующему шагу
+    </button>
+</div>
