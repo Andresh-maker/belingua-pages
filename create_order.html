@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <title>Создание заказа</title>
+</head>
+<body>
+
+<div class="page" id="page">
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="row align-center">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="assets/images/header/logo.png" alt="logo" />
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a href="/" class="menu__link">Главная страница</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Каталог переводчиков</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Для переводчиков</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Блог</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <div class="enter">
+                        <a href="#">Войти</a>
+                    </div>
+                    <div class="create-order">
+                        <a href="create_order.html" class="btn primary small">Создать заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="header__line"></span>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <div class="step" id="app">
+            <div class="container">
+                <div class="row">
+                    <div class="step__content">
+                        <div class="step__wrapper">
+                            <div class="step__item">
+                                <div class="step-element" id="step-1">
+                                    <div class="step-element__count">1 из 3</div>
+                                    <h3 class="step-element__title">Укажите детали перевода</h3>
+                                    <form action="#" class="form-step">
+                                        <div class="form-step__group">
+                                            <i class="Aa"></i>
+                                            <label for="form-step__original">Язык оригинала</label>
+                                            <input id="form-step__original" type="text" name="form-step__original"
+                                                   class="form-step__original"/>
+                                        </div>
+                                        <div class="form-step__group">
+                                            <i class="union"></i>
+                                            <label for="form-step__translation">Язык перевода</label>
+                                            <input id="form-step__translation" type="text" name="form-step__translation"
+                                                   class="form-step__translation"/>
+                                        </div>
+                                
+                                        <div class="form-step__tabs">
+                                            <div class="form-step__tab active">Устный перевод</div>
+                                            <div class="form-step__tab">Письменный перевод</div>
+                                        </div>
+                                
+                                        <div class="form-step__content">
+                                            <div class="form-step_label">Метод перевода</div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="1"/>
+                                                <label for="1">Последовательный перевод</label>
+                                            </div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="2"/>
+                                                <label for="2">Синхронный перевод</label>
+                                            </div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="3"/>
+                                                <label for="3">Шушутаж</label>
+                                            </div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="4"/>
+                                                <label for="4">Аудио-визуальный перевод</label>
+                                            </div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="5"/>
+                                                <label for="5">Гид-переводчик</label>
+                                            </div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="6"/>
+                                                <label for="6">Сурдоперевод</label>
+                                            </div>
+                                
+                                            <div class="form-step__group_list">
+                                                <input name="method" type="radio" id="7"/>
+                                                <input class="other" type="text" placeholder="Другой">
+                                            </div>
+                                
+                                        </div>
+                                
+                                        <div class="form-step__group">
+                                            <label for="form-step__subjects">Тематики перевода</label>
+                                            <input id="form-step__subjects" placeholder="Например, медицина" type="text" name="form-step__subjects"
+                                                   class="form-step__subjects not_icon"/>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="step-element__btn">
+                                    <a href="/" class="btn tertiary big">
+                                        Вернуться на главную
+                                    </a>
+                                    <button type="button" class="btn primary big next">
+                                        К следующему шагу
+                                    </button>
+                                </div>                    </div>
+                            <div class="step__item">
+                            </div>
+                            <div class="step__item">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="questions">
+                        <div class="questions__title">
+                            <h4 class="questions__h4">Частые вопросы</h4>
+                        </div>
+                        <div class="questions__list">
+        
+                            <div class="questions__item">
+                                <div class="questions__toggle">
+                                    <span class="questions__text">Как понять какой вид перевода мне нужен?</span>
+                                    <i class="dropdown"></i>
+                                </div>
+                                <div class="questions__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+                                    cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+                                    officiis quidem quisquam unde voluptas?
+                                </div>
+                            </div>
+        
+                            <div class="questions__item">
+                                <div class="questions__toggle">
+                                    <span class="questions__text">Как получить качественный перевод?</span>
+                                    <i class="dropdown"></i>
+                                </div>
+                                <div class="questions__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+                                    cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+                                    officiis quidem quisquam unde voluptas?
+                                </div>
+                            </div>
+        
+                            <div class="questions__item">
+                                <div class="questions__toggle">
+                                    <span class="questions__text">Как происходит оплата работы?</span>
+                                    <i class="dropdown"></i>
+                                </div>
+                                <div class="questions__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+                                    cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+                                    officiis quidem quisquam unde voluptas?
+                                </div>
+                            </div>
+        
+                            <div class="questions__item">
+                                <div class="questions__toggle">
+                                    <span class="questions__text">Когда появятся первые предложения?</span>
+                                    <i class="dropdown"></i>
+                                </div>
+                                <div class="questions__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, aliquid commodi
+                                    cumque eius eligendi fugiat inventore labore magnam, neque nihil nobis, numquam odit officia
+                                    officiis quidem quisquam unde voluptas?
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+    
+            <div class="footer__sub">
+                <div class="footer__item">
+                    <div class="footer__logo">
+                        <a href="/">
+                            <img src="assets/images/header/logo.png" alt="logo"/>
+                        </a>
+                    </div>
+                    <div class="footer__mail">
+                        <a href="mailto:hello@belingua.ru">hello@belingua.ru</a>
+                    </div>
+                    <div class="footer__address">
+                        104250, г. Москва, ул. Ленина 24,
+                        БЦ «Невский», 16 этаж, офис 306
+                    </div>
+                </div>
+    
+                <div class="footer__item align-center">
+                    <div class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__title">Заказчикам</li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Личный кабинет</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Каталог переводчиков</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Создать заказ</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Частые вопросы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Блог</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="footer__item align-center">
+                    <div class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__title">Переводчикам</li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Стать переводчиком</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Кабинет переводчика</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Найти заказ</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="menu__link">Каталог заказов</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="footer__item align-center">
+                    <div class="menu social">
+    
+                        <ul class="menu__list social">
+                            <li class="menu__title social">Связаться с нами</li>
+                            <li class="menu__item social">
+                                <a href="#" class="menu__link social">Твиттер</a>
+                            </li>
+                            <li class="menu__item social">
+                                <a href="#" class="menu__link social">Телеграмм</a>
+                            </li>
+                            <li class="menu__item social">
+                                <a href="#" class="menu__link social">Вконтакте</a>
+                            </li>
+                            <li class="menu__item social">
+                                <a href="#" class="menu__link social">Инстаграмм</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="copyright__left">
+                        <span class="copy">© Belingua 2021</span>
+                    </div>
+                    <div class="copyright__right">
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Лицензионное соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </footer></div>
+
+<!-- JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

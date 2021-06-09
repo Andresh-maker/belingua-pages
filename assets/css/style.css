@@ -411,6 +411,13 @@ main a {
     text-decoration: none;
 }
 
+main h4 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #030F30;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -418,6 +425,10 @@ main a {
 body {
     font-family: Inter, sans-serif;
     font-weight: 400;
+}
+
+main {
+    min-height: 50vh;
 }
 
 .container {
@@ -809,6 +820,138 @@ form.forms-language .forms-language__group label.active {
     top: 8px;
     color: #525962;
     font-size: 13px;
+}
+
+form.form-step {
+    max-width: 349px;
+    width: 100%;
+}
+
+form.form-step .form-step__content {
+    margin: 24px 0;
+}
+
+form.form-step .form-step_label {
+    color: #525962;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
+
+form.form-step .form-step__group {
+    position: relative;
+}
+
+form.form-step .form-step__group i {
+    position: absolute;
+    left: 14px;
+    top: 38px;
+}
+
+form.form-step .form-step__group label {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #525962;
+}
+
+form.form-step .form-step__group input {
+    padding-left: 40px;
+    margin: 8px 0 24px;
+    width: 100%;
+    height: 44px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    position: relative;
+    transition: all 80ms linear;
+}
+
+form.form-step .form-step__group input.not_icon {
+    padding-left: 12px;
+}
+
+form.form-step .form-step__group_list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+form.form-step .form-step__group_list:last-child {
+    margin-bottom: 0;
+}
+
+form.form-step .form-step__group_list label {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #0C0F17;
+}
+
+form.form-step .form-step__group_list input {
+    margin-right: 11px;
+}
+
+form.form-step .form-step__group_list input.other {
+    height: 44px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    position: relative;
+    width: 322px;
+    padding-left: 12px;
+}
+
+form.form-step .form-step__group_list input[type='radio'] {
+    -webkit-appearance: none;
+    border: none;
+    width: 17px;
+    height: 17px;
+    background: url(../images/input/radio_button.png) center center no-repeat;
+}
+
+form.form-step .form-step__group_list input[type='radio']:checked {
+    background: url(../images/input/radio_checked.png) center center no-repeat;
+}
+
+form.form-step .form-step__tabs {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+form.form-step .form-step__tabs .form-step__tab {
+    padding: 12px 16px;
+    border: 1px solid #D7DADE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+form.form-step .form-step__tabs .form-step__tab:first-child {
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+form.form-step .form-step__tabs .form-step__tab:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+form.form-step .form-step__tabs .form-step__tab.active {
+    color: #5753D0;
+    border: 1px solid #5753D0;
 }
 
 .expert-top {
@@ -1650,4 +1793,90 @@ footer#footer.footer .copyright .copyright__right a:hover {
 
 footer#footer.footer .copyright .copyright__right a:last-child {
     margin-left: 24px;
+}
+
+.step {
+    padding-top: 147px;
+}
+
+.step .row {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.step .step__content {
+    width: 60%;
+}
+
+.step .step__content .step-element {
+    padding: 24px;
+    background: #F7F7F8;
+    border-radius: 8px;
+}
+
+.step .step__content .step-element .step-element__count {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    color: #949BA4;
+    margin-bottom: 12px;
+}
+
+.step .step__content .step-element .step-element__title {
+    color: #0C0F17;
+    margin-bottom: 32px;
+}
+
+.step .questions {
+    width: 35%;
+}
+
+.step .questions .questions__list {
+    margin-top: 24px;
+    border: 1px solid #EEF0F1;
+    border-radius: 4px;
+}
+
+.step .questions .questions__list .questions__item {
+    position: relative;
+}
+
+.step .questions .questions__list .questions__item:last-child {
+    border-bottom: none;
+}
+
+.step .questions .questions__list .questions__item .questions__toggle {
+    position: relative;
+    padding: 16px 12px;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 10;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #EEEFF1;
+}
+
+.step .questions .questions__list .questions__item .questions__content {
+    width: 100%;
+    display: none;
+    padding: 16px 12px;
+    border-bottom: 1px solid #EEEFF1;
+    background: #F7F7F8;
+}
+
+.step .questions .questions__list .questions__item .questions__content.active {
+    position: relative;
+    display: block;
+}
+
+.step .step-element__btn {
+    margin-top: 48px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
