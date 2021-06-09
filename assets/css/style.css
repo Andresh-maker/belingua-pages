@@ -362,15 +362,22 @@ textarea {
 
 @font-face {
     font-family: 'Inter';
-  src: local("Inter Thin BETA"), local("Inter-Thin-BETA"), url("../fonts/Inter/Inter-ThinBETA.woff2") format("woff2"), url("../fonts/Inter/Inter-ThinBETA.woff") format("woff"), url("../fonts/Inter/Inter-ThinBETA.ttf") format("truetype");
-  font-weight: 100;
+  src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter/Inter-Regular.woff") format("woff"), url("../fonts/Inter/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'Inter';
-  src: local("Inter Regular"), local("Inter-Regular"), url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter/Inter-Regular.woff") format("woff"), url("../fonts/Inter/Inter-Regular.ttf") format("truetype");
-  font-weight: 400;
+  src: local("Inter Medium"), local("Inter-Medium"), url("../fonts/Inter/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter/Inter-Medium.woff") format("woff"), url("../fonts/Inter/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+  src: local("Inter Semi Bold"), local("Inter-Semi-Bold"), url("../fonts/Inter/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter/Inter-SemiBold.woff") format("woff"), url("../fonts/Inter/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -530,32 +537,32 @@ h1 {
 }
 
 i.Aa {
-    background: url("../images/input/Aa.svg");
-    width: 16.8px;
-    height: 10.65px;
+    background: url("../images/input/heading_icon.svg");
+    width: 20px;
+    height: 20px;
     z-index: 2;
 }
 
 i.union {
-    background: url("../images/input/Union.svg");
-    width: 14.09px;
-    height: 14px;
+    background: url("../images/input/heading_icon-1.svg");
+    width: 20px;
+    height: 20px;
     z-index: 2;
 }
 
 i.location {
-    width: 11.25px;
-    height: 16.25px;
+    width: 20px;
+    height: 20px;
     z-index: 2;
-    background: url("../images/input/icon_20_pin.svg") no-repeat center;
+    background: url("../images/input/heading_icon-2.svg") no-repeat center;
     background-size: cover;
 }
 
 i.dropdown {
-    width: 14px;
-    height: 7px;
+    width: 20px;
+    height: 20px;
     z-index: 2;
-    background: url("../images/input/dropdown.svg") no-repeat center;
+    background: url("../images/input/icon_24_chevronedown.svg") no-repeat center;
     background-size: cover;
 }
 
@@ -754,7 +761,6 @@ form.forms-language .forms-language__group.dropdown-group i.dropdown {
     content: '-';
     position: absolute;
     right: 12px;
-    top: 25px;
     cursor: pointer;
 }
 
@@ -764,8 +770,11 @@ form.forms-language .forms-language__group:nth-child(even) {
 
 form.forms-language .forms-language__group i.Aa, form.forms-language .forms-language__group i.union, form.forms-language .forms-language__group i.location {
     position: absolute;
-    top: 38%;
     left: 14px;
+}
+
+form.forms-language .forms-language__group i.Aa, form.forms-language .forms-language__group i.union, form.forms-language .forms-language__group i.location, form.forms-language .forms-language__group i.dropdown {
+    top: 18px;
 }
 
 form.forms-language .forms-language__group input {
@@ -776,12 +785,12 @@ form.forms-language .forms-language__group input {
     border: none;
     font-size: 15px;
     position: relative;
-    padding-top: 11px;
+    padding-top: 14px;
     transition: all 80ms linear;
 }
 
 form.forms-language .forms-language__group input:focus + label {
-    top: 7px;
+    top: 8px;
     color: #525962;
     font-size: 13px;
 }
@@ -797,7 +806,7 @@ form.forms-language .forms-language__group label {
 }
 
 form.forms-language .forms-language__group label.active {
-    top: 7px;
+    top: 8px;
     color: #525962;
     font-size: 13px;
 }
@@ -1043,6 +1052,7 @@ form.forms-language .forms-language__group label.active {
     border-radius: 8px;
     top: 0;
     transition: all 0.2s linear;
+    color: inherit;
 }
 
 .category-top .category-top__list .category-top__item:hover {
@@ -1063,16 +1073,17 @@ form.forms-language .forms-language__group label.active {
     margin-top: 24px;
 }
 
-.category-top .category-top__list .category-top__item .category-top__content .category-top__link {
+.category-top .category-top__list .category-top__item .category-top__content .category-top__title {
     text-decoration: none;
     color: #030F30;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 28px;
+    transition: fill 0.2s linear;
 }
 
-.category-top .category-top__list .category-top__item .category-top__content .category-top__link:hover {
+.category-top .category-top__list .category-top__item:hover .category-top__content > .category-top__title {
     color: #5753D0;
 }
 
@@ -1128,6 +1139,8 @@ form.forms-language .forms-language__group label.active {
     width: 45%;
     overflow: hidden;
     height: 550px;
+    touch-action: auto;
+    -ms-touch-action: auto;
 }
 
 .find-translator .container .slider .slider__info .slider__info_item {
