@@ -25,7 +25,6 @@ form.forms-language {
         content: '-';
         position: absolute;
         right: 12px;
-        top: 25px;
         cursor: pointer;
       }
     }
@@ -36,8 +35,10 @@ form.forms-language {
 
     i.Aa, i.union, i.location {
       position: absolute;
-      top: 38%;
       left: 14px;
+    }
+    i.Aa, i.union, i.location, i.dropdown{
+      top: 18px;
     }
 
     input {
@@ -48,10 +49,10 @@ form.forms-language {
       border: none;
       font-size: 15px;
       position: relative;
-      padding-top: 11px;
+      padding-top: 14px;
       transition: all 80ms linear;
       &:focus + label {
-        top: 7px;
+        top: 8px;
         color: $grey-4;
         font-size: 13px;
       }
@@ -65,7 +66,7 @@ form.forms-language {
       transition: all 80ms linear;
       color: $grey-3;
       &.active {
-        top: 7px;
+        top: 8px;
         color: $grey-4;
         font-size: 13px;
       }

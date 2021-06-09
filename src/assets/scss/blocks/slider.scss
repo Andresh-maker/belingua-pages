@@ -16,6 +16,8 @@
         width: 45%;
         overflow: hidden;
         height: 550px;
+        touch-action: auto;
+        -ms-touch-action: auto;
 
         .slider__info_item {
           display: flex;

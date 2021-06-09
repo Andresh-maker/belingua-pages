@@ -8,10 +8,7 @@ const sliderInfo = new Swiper('.slider__info', {
     slidesPerView: 3,
     slideToClickedSlide: true,
     spaceBetween: 32,
-    slidesPerGroup: 1,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
-    cssMode: true,
+    allowTouchMove: false,
 });
 
 const sliderContent = new Swiper('.slider__content', {

@@ -20,6 +20,7 @@
       border-radius: 8px;
       top: 0;
       transition: all 0.2s linear;
+      color: inherit;
       &:hover{
         top: -8px;
         box-shadow: 0 4px 8px -2px rgba(0, 17, 61, 0.08);
@@ -33,19 +34,21 @@
         fill: $primary;
       }
 
+
       .category-top__content {
         margin-top: 24px;
-        .category-top__link{
+        .category-top__title{
           text-decoration: none;
           color: $grey-1;
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
           line-height: 28px;
-          &:hover{
-            color: $primary;
-          }
+          transition: fill 0.2s linear;
         }
+      }
+      &:hover .category-top__content > .category-top__title{
+        color: $primary;
       }
 
       .category-top__footer {
