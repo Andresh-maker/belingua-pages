@@ -601,6 +601,24 @@ i.next {
     background-size: cover;
 }
 
+i.date-start {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: url("../images/input/date-start.svg") no-repeat center;
+    background-size: cover;
+}
+
+i.date-end {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    background: url("../images/input/date-end.svg") no-repeat center;
+    background-size: cover;
+}
+
 header#header {
     background: transparent;
     position: absolute;
@@ -769,7 +787,7 @@ form.forms-language .forms-language__group.dropdown-group input.dropdown + label
 }
 
 form.forms-language .forms-language__group.dropdown-group i.dropdown {
-    content: '-';
+    content: '';
     position: absolute;
     right: 12px;
     cursor: pointer;
@@ -822,29 +840,44 @@ form.forms-language .forms-language__group label.active {
     font-size: 13px;
 }
 
+#form-step-1 {
+    max-width: 352px;
+}
+
+#form-step-2 {
+    max-width: 520px;
+}
+
+#form-step-3 {
+    min-width: 342px;
+}
+
 form.form-step {
-    max-width: 349px;
     width: 100%;
 }
 
-form.form-step .form-step__content {
-    margin: 24px 0;
-}
-
-form.form-step .form-step_label {
-    color: #525962;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    margin-bottom: 12px;
-}
-
 form.form-step .form-step__group {
+    margin-top: 24px;
     position: relative;
 }
 
-form.form-step .form-step__group i {
+form.form-step .form-step__group.dropdown-group {
+    position: relative;
+}
+
+form.form-step .form-step__group.dropdown-group i.dropdown {
+    content: '';
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    top: 38px;
+}
+
+form.form-step .form-step__group.dropdown-group input.dropdown {
+    padding-left: 12px;
+}
+
+form.form-step .form-step__group i:not(.dropdown) {
     position: absolute;
     left: 14px;
     top: 38px;
@@ -860,7 +893,7 @@ form.form-step .form-step__group label {
 
 form.form-step .form-step__group input {
     padding-left: 40px;
-    margin: 8px 0 24px;
+    margin: 8px 0 0px;
     width: 100%;
     height: 44px;
     outline: none;
@@ -918,40 +951,6 @@ form.form-step .form-step__group_list input[type='radio'] {
 
 form.form-step .form-step__group_list input[type='radio']:checked {
     background: url(../images/input/radio_checked.png) center center no-repeat;
-}
-
-form.form-step .form-step__tabs {
-    display: -ms-flexbox;
-    display: flex;
-}
-
-form.form-step .form-step__tabs .form-step__tab {
-    padding: 12px 16px;
-    border: 1px solid #D7DADE;
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    background: white;
-    cursor: pointer;
-}
-
-form.form-step .form-step__tabs .form-step__tab:first-child {
-    border-right: none;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-}
-
-form.form-step .form-step__tabs .form-step__tab:last-child {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-}
-
-form.form-step .form-step__tabs .form-step__tab.active {
-    color: #5753D0;
-    border: 1px solid #5753D0;
 }
 
 .expert-top {
@@ -1806,12 +1805,19 @@ footer#footer.footer .copyright .copyright__right a:last-child {
 
 .step .step__content {
     width: 60%;
+    overflow-x: hidden;
+}
+
+.step .step__content .step__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .step .step__content .step-element {
     padding: 24px;
     background: #F7F7F8;
     border-radius: 8px;
+    transition: all 0.2s linear;
 }
 
 .step .step__content .step-element .step-element__count {
@@ -1826,6 +1832,60 @@ footer#footer.footer .copyright .copyright__right a:last-child {
 .step .step__content .step-element .step-element__title {
     color: #0C0F17;
     margin-bottom: 32px;
+}
+
+.step .step__content .step-element .form-step_label {
+    color: #525962;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
+
+.step .step__content .step-element hr {
+    margin: 24px 0;
+    border: 1px solid #D7DADE;
+}
+
+.step .step__content .step-element .step-element__text {
+    max-width: 520px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.step .step__content .step-element .form-step__content {
+    margin: 24px 0;
+    display: none;
+}
+
+.step .step__content .step-element .form-step__content.active {
+    display: block;
+}
+
+.step .step__content .step-element .form-step__date {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.step .step__content .step-element .form-step__date > .form-step__group:last-child {
+    margin-left: 12px;
+}
+
+.step .step__content .step-element .step-element__flex:first-child {
+    padding-right: 24px;
+    border-right: 1px solid #D7DADE;
+}
+
+.step .step__content .step-element .step-element__flex:last-child {
+    padding-left: 24px;
+}
+
+.step .step__content .step-element .step-element__flex > .btn {
+    margin-top: 24px;
+    width: 100%;
 }
 
 .step .questions {
@@ -1869,7 +1929,6 @@ footer#footer.footer .copyright .copyright__right a:last-child {
 }
 
 .step .questions .questions__list .questions__item .questions__content.active {
-    position: relative;
     display: block;
 }
 
@@ -1879,4 +1938,40 @@ footer#footer.footer .copyright .copyright__right a:last-child {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.form-step__tabs {
+    margin-top: 24px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.form-step__tabs .form-step__tab {
+    padding: 12px 16px;
+    border: 1px solid #D7DADE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.form-step__tabs .form-step__tab:first-child {
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-step__tabs .form-step__tab:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.form-step__tabs .form-step__tab.active {
+    color: #5753D0;
+    border: 1px solid #5753D0;
 }
