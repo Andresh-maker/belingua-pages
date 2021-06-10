@@ -1,7 +1,7 @@
 <div class="step-element" id="step-1">
     <div class="step-element__count">1 из 3</div>
     <h3 class="step-element__title">Укажите детали перевода</h3>
-    <form action="#" class="form-step">
+    <form action="#" class="form-step" id="form-step-1">
         <div class="form-step__group">
             <i class="Aa"></i>
             <label for="form-step__original">Язык оригинала</label>
@@ -20,11 +20,11 @@
             <div class="form-step__tab">Письменный перевод</div>
         </div>
 
-        <div class="form-step__content">
+        <div class="form-step__content active">
             <div class="form-step_label">Метод перевода</div>
 
             <div class="form-step__group_list">
-                <input name="method" type="radio" id="1"/>
+                <input checked name="method" type="radio" id="1"/>
                 <label for="1">Последовательный перевод</label>
             </div>
 
@@ -56,6 +56,51 @@
             <div class="form-step__group_list">
                 <input name="method" type="radio" id="7"/>
                 <input class="other" type="text" placeholder="Другой">
+            </div>
+
+        </div>
+
+        <div class="form-step__content">
+            <div class="form-step_label">Метод перевода</div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="8"/>
+                <label for="8">Перевод текстов</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="9"/>
+                <label for="9">Нотариальное заверение документов</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="10"/>
+                <label for="10">Перевод технической документации</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="11"/>
+                <label for="11">Локализация сайтов и приложений</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="12"/>
+                <label for="12">Перевод субтитров</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="13"/>
+                <label for="13">Перевод субтитров</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="14"/>
+                <label for="14">Локализация ПО</label>
+            </div>
+
+            <div class="form-step__group_list">
+                <input name="method" type="radio" id="15"/>
+                <label for="14">Локализация игр</label>
             </div>
 
         </div>

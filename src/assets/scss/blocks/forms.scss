@@ -22,7 +22,7 @@ form.forms-language {
       }
 
       i.dropdown{
-        content: '-';
+        content: '';
         position: absolute;
         right: 12px;
         cursor: pointer;
@@ -73,24 +73,37 @@ form.forms-language {
     }
   }
 }
-
+#form-step-1{
+    max-width: 352px;
+}
+#form-step-2{
+    max-width: 520px;
+}
+#form-step-3{
+  min-width: 342px;
+}
 form.form-step {
-  max-width: 349px;
+
   width: 100%;
-  .form-step__content{
-    margin: 24px 0;
-  }
-  .form-step_label{
-    color: #525962;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 16px;
-    margin-bottom: 12px;
-  }
   .form-step__group {
+    margin-top: 24px;
     position: relative;
-    i{
+    &.dropdown-group {
+      position: relative;
+      i.dropdown{
+        content: '';
+        position: absolute;
+        right: 12px;
+        cursor: pointer;
+        top: 38px;
+      }
+      input {
+        &.dropdown {
+          padding-left: 12px;
+        }
+      }
+    }
+    i:not(.dropdown){
       position: absolute;
       left: 14px;
       top: 38px;
@@ -104,7 +117,7 @@ form.form-step {
     }
     input{
       padding-left: 40px;
-      margin: 8px 0 24px;
+      margin: 8px 0 0px;
       width: 100%;
       height: 44px;
       outline: none;
@@ -151,34 +164,6 @@ form.form-step {
       }
       &[type='radio']:checked{
         background: url(../images/input/radio_checked.png) center center no-repeat;
-      }
-    }
-  }
-  .form-step__tabs{
-    display: flex;
-    .form-step__tab{
-      padding: 12px 16px;
-      border: 1px solid #D7DADE;
-      box-sizing: border-box;
-      border-radius: 4px;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px;
-      background: $text-color;
-      cursor: pointer;
-      &:first-child{
-        border-right: none;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-      }
-      &:last-child{
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-      }
-      &.active{
-        color: $primary;
-        border: 1px solid $primary;
       }
     }
   }

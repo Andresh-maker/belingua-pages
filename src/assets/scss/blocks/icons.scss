@@ -45,3 +45,19 @@ i.next {
   background: url("../images/next.svg") no-repeat center;
   background-size: cover;
 }
+i.date-start {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: url("../images/input/date-start.svg") no-repeat center;
+  background-size: cover;
+}
+i.date-end {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: url("../images/input/date-end.svg") no-repeat center;
+  background-size: cover;
+}

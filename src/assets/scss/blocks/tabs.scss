@@ -1,0 +1,30 @@
+.form-step__tabs{
+  margin-top: 24px;
+  display: flex;
+  .form-step__tab{
+    padding: 12px 16px;
+    border: 1px solid #D7DADE;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    background: $text-color;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    &:first-child{
+      border-right: none;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:last-child{
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    &.active{
+      color: $primary;
+      border: 1px solid $primary;
+    }
+  }
+}

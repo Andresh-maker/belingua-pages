@@ -7,11 +7,17 @@
 
   .step__content {
     width: 60%;
+    overflow-x: hidden;
+    .step__wrapper{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     .step-element {
       padding: 24px;
       background: #F7F7F8;
       border-radius: 8px;
+      transition: all 0.2s linear;
 
       .step-element__count {
         font-size: 13px;
@@ -24,6 +30,51 @@
       .step-element__title{
         color: $grey-6;
         margin-bottom: 32px;
+      }
+      .form-step_label{
+        color: #525962;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 12px;
+      }
+      hr{
+        margin: 24px 0;
+        border: 1px solid #D7DADE;
+      }
+      .step-element__text{
+        max-width: 520px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+      .form-step__content{
+        margin: 24px 0;
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
+      .form-step__date{
+        display: flex;
+        > .form-step__group:last-child{
+          margin-left: 12px;
+        }
+      }
+      .step-element__flex{
+        &:first-child{
+          padding-right: 24px;
+          border-right: 1px solid #D7DADE;
+        }
+        &:last-child{
+          padding-left: 24px;
+        }
+        > .btn{
+          margin-top: 24px;
+          width: 100%;
+        }
       }
     }
   }
@@ -56,7 +107,6 @@
           border-bottom: 1px solid #EEEFF1;
           background: #F7F7F8;
           &.active{
-            position: relative;
             display: block;
           }
         }

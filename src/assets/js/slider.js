@@ -1,7 +1,6 @@
 let tick
 const sliderInfo = new Swiper('.slider__info', {
     direction: 'vertical',
-    init: true,
     containerModifierClass: 'slider__info',
     wrapperClass: 'info-wrapper',
     slideClass: 'slider__info_item',
@@ -40,7 +39,7 @@ function timerSlider(elem) {
     clearInterval(tick)
 
     tick = setInterval(() => {
-        if (percentTime <= 100){
+        if (percentTime <= 100) {
             progress.style.height = percentTime + '%'
             percentTime += 1 / (time + 5);
         } else {
@@ -50,6 +49,40 @@ function timerSlider(elem) {
             sliderContent.slideNext()
         }
     }, 10);
-
 }
+
+const stepSlider = new Swiper('.step__content', {
+    direction: 'horizontal',
+    containerModifierClass: 'step__content',
+    wrapperClass: 'step__wrapper',
+    slideClass: 'step__item',
+    slidesPerView: 1,
+    allowTouchMove: false,
+    on: {
+        slideChangeTransitionStart: function (){
+            $('.swiper-slide-active').find('.form-step__tab').first().click()
+        }
+    }
+})
+const tabs = $('.form-step__tab')
+const content = $('.form-step__content')
+
+$('.step-element__btn > .next').on('click', function () {
+    stepSlider.slideNext()
+})
+
+$('.step-element__btn > .prev').on('click', function () {
+    stepSlider.slidePrev()
+})
+
+tabs.on('click', toggleTab)
+
+function toggleTab() {
+    tabs.removeClass('active')
+    $(this).addClass('active')
+    let contentIdx = content[tabs.index(this)]
+    content.hide()
+    $(contentIdx).show()
+}
+
 
