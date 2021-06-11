@@ -450,6 +450,18 @@ main {
     }
 }
 
+.container-form_1 {
+    max-width: 352px;
+}
+
+.container-form_2 {
+    max-width: 520px;
+}
+
+.container-form_3 {
+    min-width: 342px;
+}
+
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -617,6 +629,12 @@ i.date-end {
     z-index: 2;
     background: url("../images/input/date-end.svg") no-repeat center;
     background-size: cover;
+}
+
+i.time {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
 }
 
 header#header {
@@ -840,18 +858,6 @@ form.forms-language .forms-language__group label.active {
     font-size: 13px;
 }
 
-#form-step-1 {
-    max-width: 352px;
-}
-
-#form-step-2 {
-    max-width: 520px;
-}
-
-#form-step-3 {
-    min-width: 342px;
-}
-
 form.form-step {
     width: 100%;
 }
@@ -859,6 +865,10 @@ form.form-step {
 form.form-step .form-step__group {
     margin-top: 24px;
     position: relative;
+}
+
+form.form-step .form-step__group.time-group {
+    max-width: 346px;
 }
 
 form.form-step .form-step__group.dropdown-group {
@@ -881,6 +891,16 @@ form.form-step .form-step__group i:not(.dropdown) {
     position: absolute;
     left: 14px;
     top: 38px;
+}
+
+form.form-step .form-step__group i.time {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    top: 34px;
+    left: inherit;
+    color: #80868E;
 }
 
 form.form-step .form-step__group label {
@@ -1809,12 +1829,18 @@ footer#footer.footer .copyright .copyright__right a:last-child {
 }
 
 .step .step__content .step__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: -ms-flexbox;
+    display: flex;
+    width: 1000%;
+}
+
+.step .step__content .step__wrapper .step__item {
+    width: 100%;
 }
 
 .step .step__content .step-element {
     padding: 24px;
+    width: 100%;
     background: #F7F7F8;
     border-radius: 8px;
     transition: all 0.2s linear;

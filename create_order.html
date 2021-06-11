@@ -12,6 +12,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     
     <title>Создание заказа</title>
 </head>
@@ -62,120 +63,122 @@
                 <div class="row">
                     <div class="step__content">
                         <div class="step__wrapper">
-                            <div class="step__item">
+                            <div class="step__item" data-hash="step-1">
                                 <div class="step-element" id="step-1">
-                                    <div class="step-element__count">1 из 3</div>
-                                    <h3 class="step-element__title">Укажите детали перевода</h3>
-                                    <form action="#" class="form-step" id="form-step-1">
-                                        <div class="form-step__group">
-                                            <i class="Aa"></i>
-                                            <label for="form-step__original">Язык оригинала</label>
-                                            <input id="form-step__original" type="text" name="form-step__original"
-                                                   class="form-step__original"/>
-                                        </div>
-                                        <div class="form-step__group">
-                                            <i class="union"></i>
-                                            <label for="form-step__translation">Язык перевода</label>
-                                            <input id="form-step__translation" type="text" name="form-step__translation"
-                                                   class="form-step__translation"/>
-                                        </div>
-                                
-                                        <div class="form-step__tabs">
-                                            <div class="form-step__tab active">Устный перевод</div>
-                                            <div class="form-step__tab">Письменный перевод</div>
-                                        </div>
-                                
-                                        <div class="form-step__content active">
-                                            <div class="form-step_label">Метод перевода</div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input checked name="method" type="radio" id="1"/>
-                                                <label for="1">Последовательный перевод</label>
+                                    <div class="container-form_1">
+                                        <div class="step-element__count">1 из 3</div>
+                                        <h3 class="step-element__title">Укажите детали перевода</h3>
+                                        <form action="#" class="form-step" id="form-step-1">
+                                            <div class="form-step__group">
+                                                <i class="Aa"></i>
+                                                <label for="form-step__original">Язык оригинала</label>
+                                                <input id="form-step__original" type="text" name="form-step__original"
+                                                       class="form-step__original"/>
+                                            </div>
+                                            <div class="form-step__group">
+                                                <i class="union"></i>
+                                                <label for="form-step__translation">Язык перевода</label>
+                                                <input id="form-step__translation" type="text" name="form-step__translation"
+                                                       class="form-step__translation"/>
                                             </div>
                                 
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="2"/>
-                                                <label for="2">Синхронный перевод</label>
+                                            <div class="form-step__tabs">
+                                                <div class="form-step__tab active">Устный перевод</div>
+                                                <div class="form-step__tab">Письменный перевод</div>
                                             </div>
                                 
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="3"/>
-                                                <label for="3">Шушутаж</label>
+                                            <div class="form-step__content active">
+                                                <div class="form-step_label">Метод перевода</div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input checked name="method" type="radio" id="1"/>
+                                                    <label for="1">Последовательный перевод</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="2"/>
+                                                    <label for="2">Синхронный перевод</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="3"/>
+                                                    <label for="3">Шушутаж</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="4"/>
+                                                    <label for="4">Аудио-визуальный перевод</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="5"/>
+                                                    <label for="5">Гид-переводчик</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="6"/>
+                                                    <label for="6">Сурдоперевод</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="7"/>
+                                                    <input class="other" type="text" placeholder="Другой">
+                                                </div>
+                                
                                             </div>
                                 
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="4"/>
-                                                <label for="4">Аудио-визуальный перевод</label>
+                                            <div class="form-step__content">
+                                                <div class="form-step_label">Метод перевода</div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="8"/>
+                                                    <label for="8">Перевод текстов</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="9"/>
+                                                    <label for="9">Нотариальное заверение документов</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="10"/>
+                                                    <label for="10">Перевод технической документации</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="11"/>
+                                                    <label for="11">Локализация сайтов и приложений</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="12"/>
+                                                    <label for="12">Перевод субтитров</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="13"/>
+                                                    <label for="13">Перевод субтитров</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="14"/>
+                                                    <label for="14">Локализация ПО</label>
+                                                </div>
+                                
+                                                <div class="form-step__group_list">
+                                                    <input name="method" type="radio" id="15"/>
+                                                    <label for="14">Локализация игр</label>
+                                                </div>
+                                
                                             </div>
                                 
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="5"/>
-                                                <label for="5">Гид-переводчик</label>
+                                            <div class="form-step__group">
+                                                <label for="form-step__subjects">Тематики перевода</label>
+                                                <input id="form-step__subjects" placeholder="Например, медицина" type="text" name="form-step__subjects"
+                                                       class="form-step__subjects not_icon"/>
                                             </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="6"/>
-                                                <label for="6">Сурдоперевод</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="7"/>
-                                                <input class="other" type="text" placeholder="Другой">
-                                            </div>
-                                
-                                        </div>
-                                
-                                        <div class="form-step__content">
-                                            <div class="form-step_label">Метод перевода</div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="8"/>
-                                                <label for="8">Перевод текстов</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="9"/>
-                                                <label for="9">Нотариальное заверение документов</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="10"/>
-                                                <label for="10">Перевод технической документации</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="11"/>
-                                                <label for="11">Локализация сайтов и приложений</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="12"/>
-                                                <label for="12">Перевод субтитров</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="13"/>
-                                                <label for="13">Перевод субтитров</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="14"/>
-                                                <label for="14">Локализация ПО</label>
-                                            </div>
-                                
-                                            <div class="form-step__group_list">
-                                                <input name="method" type="radio" id="15"/>
-                                                <label for="14">Локализация игр</label>
-                                            </div>
-                                
-                                        </div>
-                                
-                                        <div class="form-step__group">
-                                            <label for="form-step__subjects">Тематики перевода</label>
-                                            <input id="form-step__subjects" placeholder="Например, медицина" type="text" name="form-step__subjects"
-                                                   class="form-step__subjects not_icon"/>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="step-element__btn">
                                     <a href="index.html" class="btn tertiary big">
@@ -185,7 +188,7 @@
                                         К следующему шагу
                                     </button>
                                 </div>                    </div>
-                            <div class="step__item">
+                            <div class="step__item" data-hash="step-2">
                                 <div class="step-element" id="step-2">
                                     <div class="step-element__count">2 из 3</div>
                                     <h3 class="step-element__title">Подробно опишите задачу</h3>
@@ -197,15 +200,16 @@
                                             <div class="form-step__tab">Удаленно</div>
                                         </div>
                                 
-                                
                                         <div class="form-step__content">
-                                            <div class="form-step__group dropdown-group">
-                                                <i class="dropdown"></i>
-                                                <label for="form-step__original">Адрес</label>
-                                                <input id="form-step__original" type="text" name="form-step__original"
-                                                       class="form-step__original dropdown"/>
-                                            </div>
                                 
+                                            <div class="container-form_2">
+                                                <div class="form-step__group dropdown-group">
+                                                    <i class="dropdown"></i>
+                                                    <label for="form-step__original">Адрес</label>
+                                                    <input id="form-step__original" type="text" name="form-step__original"
+                                                           class="form-step__original dropdown"/>
+                                                </div>
+                                            </div>
                                 
                                             <hr>
                                 
@@ -215,31 +219,130 @@
                                                 работы — 3 часа
                                             </div>
                                 
-                                            <div class="form-step__date">
-                                                <div class="form-step__group">
-                                                    <i class="date-start"></i>
-                                                    <label for="form-step__date_start">Дата начала</label>
-                                                    <input id="form-step__date_start" type="date" name="form-date-start"
-                                                           class="form-step__original date"/>
-                                                </div>
+                                            <div class="container-form_2">
+                                                <div class="form-step__date">
+                                                    <div class="form-step__group">
+                                                        <i class="date-start"></i>
+                                                        <label for="form-step__date_start1">Дата начала</label>
+                                                        <input id="form-step__date_start1" type="text" name="form-date-start"
+                                                               class="form-step__time" value="11 Июня 2021"/>
+                                                    </div>
                                 
-                                                <div class="form-step__group date-group">
-                                                    <i class="date-end"></i>
-                                                    <label for="form-step__date_end">Дата окончания</label>
-                                                    <input id="form-step__date_end" type="date" name="form-date-end"
-                                                           class="form-step__original date"/>
+                                                    <div class="form-step__group date-group">
+                                                        <i class="date-end"></i>
+                                                        <label for="form-step__date_end1">Дата окончания</label>
+                                                        <input id="form-step__date_end1" type="text" name="form-date-end"
+                                                               class="form-step__time "/>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="container-form_2">
+                                                <div class="form-step__group time-group">
+                                                    <i class="time">часов</i>
+                                                    <label for="form-step__work_time1">Длительность работы</label>
+                                                    <input id="form-step__work_time1" type="text" name="form-step__work_time"
+                                                           class="form-step__original not_icon"/>
+                                                </div>
+                                            </div>
+                                
+                                            <hr>
+                                
+                                            <div class="container-form_2">
+                                                <div class="step-element__text">
+                                                    Минимальная стоимость работы переводчиков для этой услуги составляет 2 000 ₽ в час
+                                                </div>
+                                <!--                <div class="form-step__price">-->
+                                <!--                    <div class="form-step_label">Место оказания услуги</div>-->
+                                <!--                    <div class="form-step__group">-->
+                                <!--                        <i class="price"></i>-->
+                                <!--                        <label for="form-step__price_start">от</label>-->
+                                <!--                        <input id="form-step__price_start" type="text" name="form-price-start"-->
+                                <!--                               class="form-step__price" value="12 000"/>-->
+                                <!--                    </div>-->
+                                
+                                <!--                    <div class="form-step__group price-group">-->
+                                <!--                        <i class="price"></i>-->
+                                <!--                        <label for="form-step__price_end">до</label>-->
+                                <!--                        <input id="form-step__price_end" type="text" name="form-price-end"-->
+                                <!--                               class="form-step__price "/>-->
+                                <!--                    </div>-->
+                                <!--                </div>-->
+                                
+                                            </div>
+                                
                                         </div>
                                 
                                 
                                         <div class="form-step__content">
-                                            <div class="form-step__group dropdown-group">
-                                                <i class="dropdown"></i>
-                                                <label for="form-step__originals">Адрес</label>
-                                                <input id="form-step__originals" type="text" name="form-step__original"
-                                                       class="form-step__original dropdown"/>
+                                
+                                            <div class="container-form_2">
+                                                <div class="form-step__group dropdown-group">
+                                                    <i class="dropdown"></i>
+                                                    <label for="form-step__adress2">Адрес</label>
+                                                    <input id="form-step__adress2" type="text" name="form-step__original"
+                                                           class="form-step__original dropdown"/>
+                                                </div>
                                             </div>
+                                
+                                            <hr>
+                                
+                                            <div class="step-element__text">
+                                                Выберите дату или период выполнения услуги, также укажите общее количество рабочих часов, минимальное
+                                                время
+                                                работы — 3 часа
+                                            </div>
+                                
+                                            <div class="container-form_2">
+                                                <div class="form-step__date">
+                                                    <div class="form-step__group">
+                                                        <i class="date-start"></i>
+                                                        <label for="form-step__date_start">Дата начала</label>
+                                                        <input id="form-step__date_start" type="text" name="form-date-start"
+                                                               class="form-step__time" value="11 Июня 2021"/>
+                                                    </div>
+                                
+                                                    <div class="form-step__group date-group">
+                                                        <i class="date-end"></i>
+                                                        <label for="form-step__date_end">Дата окончания</label>
+                                                        <input id="form-step__date_end" type="text" name="form-date-end"
+                                                               class="form-step__time "/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container-form_2">
+                                                <div class="form-step__group time-group">
+                                                    <i class="time">часов</i>
+                                                    <label for="form-step__work_time">Длительность работы</label>
+                                                    <input id="form-step__work_time" type="text" name="form-step__work_time"
+                                                           class="form-step__original not_icon"/>
+                                                </div>
+                                            </div>
+                                
+                                            <hr>
+                                
+                                            <div class="container-form_2">
+                                                <div class="step-element__text">
+                                                    Минимальная стоимость работы переводчиков для этой услуги составляет 2 000 ₽ в час
+                                                </div>
+                                                <!--                <div class="form-step__price">-->
+                                                <!--                    <div class="form-step_label">Место оказания услуги</div>-->
+                                                <!--                    <div class="form-step__group">-->
+                                                <!--                        <i class="price"></i>-->
+                                                <!--                        <label for="form-step__price_start">от</label>-->
+                                                <!--                        <input id="form-step__price_start" type="text" name="form-price-start"-->
+                                                <!--                               class="form-step__price" value="12 000"/>-->
+                                                <!--                    </div>-->
+                                
+                                                <!--                    <div class="form-step__group price-group">-->
+                                                <!--                        <i class="price"></i>-->
+                                                <!--                        <label for="form-step__price_end">до</label>-->
+                                                <!--                        <input id="form-step__price_end" type="text" name="form-price-end"-->
+                                                <!--                               class="form-step__price "/>-->
+                                                <!--                    </div>-->
+                                                <!--                </div>-->
+                                
+                                            </div>
+                                
                                         </div>
                                     </form>
                                 
@@ -253,7 +356,7 @@
                                         К следующему шагу
                                     </button>
                                 </div>                    </div>
-                            <div class="step__item">
+                            <div class="step__item" data-hash="step-3">
                                 <div class="step-element" id="step-3">
                                     <div class="step-element__count">3 из 3</div>
                                     <div class="row">
@@ -459,6 +562,7 @@
 
 <!-- JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
