@@ -9,12 +9,16 @@
     width: 60%;
     overflow-x: hidden;
     .step__wrapper{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      width: 1000%;
+      .step__item{
+        width: 100%;
+      }
     }
 
     .step-element {
       padding: 24px;
+      width: 100%;
       background: #F7F7F8;
       border-radius: 8px;
       transition: all 0.2s linear;

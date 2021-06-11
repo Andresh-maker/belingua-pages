@@ -61,3 +61,8 @@ i.date-end {
   background: url("../images/input/date-end.svg") no-repeat center;
   background-size: cover;
 }
+i.time{
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+}

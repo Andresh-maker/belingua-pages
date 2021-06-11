@@ -10,6 +10,7 @@ body {
   font-family: Inter, sans-serif;
   font-weight: 400;
 }
+
 main{
   min-height: 50vh;
 }
@@ -24,6 +25,17 @@ main{
   @include breakpoint($mobile-bp){
     padding: 0 15px;
     max-width: $mobile-bp;
+  }
+  &-form{
+    &_1{
+      max-width: 352px;
+    }
+    &_2{
+      max-width: 520px;
+    }
+    &_3{
+      min-width: 342px;
+    }
   }
 }
 .row{

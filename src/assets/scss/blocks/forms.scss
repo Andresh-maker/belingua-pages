@@ -73,21 +73,15 @@ form.forms-language {
     }
   }
 }
-#form-step-1{
-    max-width: 352px;
-}
-#form-step-2{
-    max-width: 520px;
-}
-#form-step-3{
-  min-width: 342px;
-}
-form.form-step {
 
+form.form-step {
   width: 100%;
   .form-step__group {
     margin-top: 24px;
     position: relative;
+    &.time-group{
+      max-width: 346px;
+    }
     &.dropdown-group {
       position: relative;
       i.dropdown{
@@ -107,6 +101,15 @@ form.form-step {
       position: absolute;
       left: 14px;
       top: 38px;
+    }
+    i.time{
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      top: 34px;
+      left: inherit;
+      color: #80868E;
     }
     label {
       font-size: 13px;
