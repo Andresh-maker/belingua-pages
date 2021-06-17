@@ -1515,8 +1515,8 @@ form .form-step__price .form-step__group i.price {
 
 @media screen and (max-width: 991px) {
     .category-top .category-top__list .category-top__item svg {
-        width: 36px;
-        height: 36px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -1526,8 +1526,8 @@ form .form-step__price .form-step__group i.price {
 
 @media screen and (max-width: 991px) {
     .category-top .category-top__list .category-top__item .category-top__header {
-        width: 50px;
-        min-width: 50px;
+        width: 38px;
+        min-width: 38px;
     }
 }
 
@@ -1538,7 +1538,6 @@ form .form-step__price .form-step__group i.price {
 @media screen and (max-width: 991px) {
     .category-top .category-top__list .category-top__item .category-top__content {
         margin-top: 0;
-        margin-left: 10px;
     }
 }
 
@@ -1550,6 +1549,12 @@ form .form-step__price .form-step__group i.price {
     font-weight: 600;
     line-height: 28px;
     transition: fill 0.2s linear;
+}
+
+@media screen and (max-width: 991px) {
+    .category-top .category-top__list .category-top__item .category-top__content .category-top__title {
+        font-size: 15px;
+    }
 }
 
 .category-top .category-top__list .category-top__item:hover .category-top__content > .category-top__title {
