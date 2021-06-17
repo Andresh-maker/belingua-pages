@@ -49,8 +49,8 @@
         width: 46px;
         height: 46px;
         @include breakpoint($sm){
-          width: 36px;
-          height: 36px;
+          width: 24px;
+          height: 24px;
         }
         fill: #B5BABF;
         transition: fill 0.2s linear;
@@ -60,8 +60,8 @@
       }
       .category-top__header{
         @include breakpoint($sm){
-          width: 50px;
-          min-width: 50px;
+          width: 38px;
+          min-width: 38px;
         }
       }
 
@@ -69,7 +69,6 @@
         margin-top: 24px;
         @include breakpoint($sm){
           margin-top: 0;
-          margin-left: 10px;
         }
         .category-top__title{
           text-decoration: none;
@@ -79,6 +78,9 @@
           font-weight: 600;
           line-height: 28px;
           transition: fill 0.2s linear;
+          @include breakpoint($sm){
+            font-size: 15px;
+          }
         }
       }
       &:hover .category-top__content > .category-top__title{
