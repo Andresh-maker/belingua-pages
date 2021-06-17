@@ -1487,12 +1487,23 @@ form .form-step__price .form-step__group i.price {
         flex-direction: row;
         -ms-flex-align: center;
         align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .category-top .category-top__list .category-top__item:nth-child(4) {
+        margin-bottom: 40px;
     }
 }
 
 .category-top .category-top__list .category-top__item:hover {
     top: -8px;
     box-shadow: 0 4px 8px -2px rgba(0, 17, 61, 0.08);
+}
+
+@media screen and (max-width: 991px) {
+    .category-top .category-top__list .category-top__item:hover {
+        top: 0;
+    }
 }
 
 .category-top .category-top__list .category-top__item svg {
@@ -1516,6 +1527,7 @@ form .form-step__price .form-step__group i.price {
 @media screen and (max-width: 991px) {
     .category-top .category-top__list .category-top__item .category-top__header {
         width: 50px;
+        min-width: 50px;
     }
 }
 
@@ -1526,6 +1538,7 @@ form .form-step__price .form-step__group i.price {
 @media screen and (max-width: 991px) {
     .category-top .category-top__list .category-top__item .category-top__content {
         margin-top: 0;
+        margin-left: 10px;
     }
 }
 
