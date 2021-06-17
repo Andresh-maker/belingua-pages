@@ -1,4 +1,5 @@
 .service-top {
+  overflow: hidden;
   padding: 72px 0;
   .container {
     .service-top__title {
@@ -13,6 +14,14 @@
       grid-auto-columns: 480px 247px 480px;
       grid-auto-rows: 266px;
       grid-gap: 24px;
+      grid-auto-flow: dense;
+      @include breakpoint($lg){
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: 1fr 1fr;
+      }
+      @include breakpoint($sm){
+        display: block;
+      }
       .service-top__item {
         overflow: hidden;
         background: #EEF5FC;
@@ -20,20 +29,76 @@
         display: flex;
         padding: 32px;
         position: relative;
+        @include breakpoint($sm){
+          margin-top: 16px;
+        }
+        &:first-child{
+          @include breakpoint($sm){
+            margin-top: 0;
+          }
+        }
         &.big{
           &.left{
             grid-column: 1 / 3;
+            @include breakpoint($lg){
+              grid-column: 1 / 5;
+            }
+            @include breakpoint($sm){
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+            }
+            .service-top__left{
+              @include breakpoint($sm){
+                width: 100%;
+                order: 2;
+              }
+            }
+            .service-top__right{
+              @include breakpoint($sm){
+                width: 100%;
+                position: relative;
+                order: 1;
+              }
+            }
           }
           &.right{
             grid-column: 2 / 4;
+            @include breakpoint($lg){
+              grid-column: 1 / 5;
+            }
+            @include breakpoint($sm){
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+            }
+            .service-top__left{
+              @include breakpoint($sm){
+                width: 100%;
+                margin-bottom: 32px;
+              }
+            }
+            .service-top__right{
+              @include breakpoint($sm){
+                width: 100%;
+                position: relative;
+              }
+            }
           }
         }
         &.small{
           &.left{
             grid-column: 1 / 2;
+            @include breakpoint($lg){
+              grid-column: 1 / 3;
+            }
+
           }
           &.right{
             grid-column: 3 / 4;
+            @include breakpoint($lg){
+              grid-column: 3 / 5;
+            }
           }
         }
         &.primary{
@@ -51,6 +116,12 @@
             font-weight: 600;
             line-height: 28px;
             color: $grey-1;
+            @include breakpoint($lg){
+              text-align: left;
+            }
+            @include breakpoint($sm){
+              text-align: center;
+            }
           }
           .service-top__text {
             color: $grey-2;
@@ -59,6 +130,9 @@
             font-style: normal;
             font-weight: 400;
             line-height: 28px;
+            @include breakpoint($lg){
+              font-size: 15px;
+            }
           }
           &.primary{
             .service-top__h3, .service-top__text{
@@ -77,11 +151,15 @@
             margin-left: auto;
           }
 
-          img {
+          img, picture {
             object-fit: contain;
             object-position: bottom;
             width: 100%;
             height: 100%;
+            @include breakpoint($sm){
+              object-fit: cover;
+              object-position: center;
+            }
           }
         }
       }

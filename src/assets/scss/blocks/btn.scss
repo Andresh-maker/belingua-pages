@@ -52,5 +52,8 @@
   &.big{
     padding: 18px 32px;
     font-size: 15px;
+    @include breakpoint($xs){
+      width: 100%;
+    }
   }
 }

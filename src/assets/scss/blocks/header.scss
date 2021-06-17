@@ -16,6 +16,58 @@ header#header {
       background: rgba(0, 17, 61, 0.08);
     }
   }
+  button.burger{
+    display: none;
+    width: 18px;
+    height: 12px;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 0;
+    color: transparent;
+    position: relative;
+    &:before, &:after{
+      content: '';
+      transition: transform .2s linear;
+    }
+    &:before, &:after, span{
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $grey-2;
+      position: absolute;
+      left: 0;
+    }
+    &:before{
+      top: 0;
+    }
+    &:after{
+      bottom: 0;
+    }
+    span{
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity .2s linear;
+    }
+    &.active{
+      span{
+        opacity: 0;
+      }
+      &:before, &:after{
+        top: 50%;
+      }
+      &:before{
+        transform: rotate(45deg);
+      }
+      &:after{
+        transform: rotate(-45deg);
+      }
+    }
+    @include breakpoint($lg){
+      display: block;
+    }
+  }
+
 
   .header__logo {
     margin-right: auto;
@@ -24,6 +76,9 @@ header#header {
     height: 80px;
   }
   nav.menu {
+    @include breakpoint($lg){
+      display: none;
+    }
     ul.menu__items {
       display: flex;
       li.menu__item {
@@ -45,6 +100,9 @@ header#header {
     margin-left: auto;
     display: flex;
     align-items: center;
+    @include breakpoint($lg){
+      display: none;
+    }
     .enter {
       a {
         color: $grey-1;

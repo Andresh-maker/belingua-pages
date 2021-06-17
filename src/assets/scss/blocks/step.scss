@@ -1,13 +1,37 @@
+#step-3{
+  .row{
+    flex-wrap: nowrap;
+    @include breakpoint($sm){
+      flex-wrap: wrap;
+    }
+  }
+}
+
 .step {
   padding-top: 147px;
-
+  @include breakpoint($sm){
+    padding-top: 90px;
+  }
+  .container{
+    @include breakpoint($sm){
+      padding: 0 15px;
+    }
+  }
   .row {
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include breakpoint($sm){
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .step__content {
     width: 60%;
     overflow-x: hidden;
+    @include breakpoint($sm){
+      width: 100%;
+    }
     .step__wrapper{
       display: flex;
       width: 1000%;
@@ -34,6 +58,9 @@
       .step-element__title{
         color: $grey-6;
         margin-bottom: 32px;
+        @include breakpoint($sm){
+          text-align: left;
+        }
       }
       .form-step_label{
         color: #525962;
@@ -42,6 +69,12 @@
         font-weight: 400;
         line-height: 16px;
         margin-bottom: 12px;
+      }
+      .container-form_2{
+        .form-step_label{
+          margin-top: 24px;
+          margin-bottom: 0;
+        }
       }
       hr{
         margin: 24px 0;
@@ -71,9 +104,19 @@
         &:first-child{
           padding-right: 24px;
           border-right: 1px solid #D7DADE;
+          @include breakpoint($sm){
+            padding-right: 0;
+            border-right: none;
+            border-bottom: 1px solid #D7DADE;
+            padding-bottom: 24px;
+          }
         }
         &:last-child{
           padding-left: 24px;
+          @include breakpoint($sm){
+            padding-left: 0;
+            padding-top: 24px;
+          }
         }
         > .btn{
           margin-top: 24px;
@@ -85,6 +128,9 @@
 
   .questions {
     width: 35%;
+    @include breakpoint($sm){
+      width: 100%;
+    }
     .questions__list{
       margin-top: 24px;
       border: 1px solid #EEF0F1;
@@ -122,5 +168,21 @@
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
+    @include breakpoint($sm){
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+    .btn:last-child{
+      @include breakpoint($sm){
+        margin-top: 8px;
+        order: 1;
+      }
+    }
+    .btn:first-child{
+      @include breakpoint($sm){
+        order: 2;
+      }
+    }
   }
+
 }

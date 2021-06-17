@@ -37,17 +37,19 @@ function timerSlider(elem) {
     let percentTime = 0
     elem.querySelectorAll('.slider__progress').forEach(item => item.style.height = "")
     clearInterval(tick)
-
     tick = setInterval(() => {
         if (percentTime <= 100) {
-            progress.style.height = percentTime + '%'
+            progress ? progress.style.height = percentTime + '%' : ''
             percentTime += 1 / (time + 5);
         } else {
             percentTime = 0
             clearInterval(tick)
-            progress.style.height = 0 + '%'
+            progress ? progress.style.height = 0 + '%' : ''
             sliderContent.slideNext()
         }
     }, 10);
 }
+
+// sliderContent.destroy(true, true)
+// sliderInfo.destroy(true, true)
 

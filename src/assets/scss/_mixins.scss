@@ -1,7 +1,17 @@
 @mixin breakpoint($bp) {
     
-    @media (max-width: $bp) {
+    @media screen and (max-width: $bp) {
         @content;
     }
     
+}
+@mixin adapt-font ($descSize, $mobSize){
+    $addSize: $descSize - $mobSize;
+    $addMobileSize: $addSize + $addSize * 0.7;
+    @media (max-width: 1920px) {
+        font-size: calc( #{$mobSize + px} + #{$addSize} * (100vw / #{$container}) );
+    }
+    @media (max-width: $lg) {
+        font-size: calc( #{$mobSize + px} + #{$addMobileSize} * ((100vw - 320px) / #{$container}) );
+    }
 }

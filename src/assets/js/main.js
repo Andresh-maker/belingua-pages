@@ -6,3 +6,7 @@ $('input').blur(function (){
 $('.questions__toggle').on('click', function () {
     $(this).parent().find('.questions__content').slideToggle()
 })
+
+$('.burger').on('click', function (){
+    $(this).toggleClass('active')
+})

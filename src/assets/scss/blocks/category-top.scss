@@ -10,6 +10,13 @@
     grid-auto-columns: 288px;
     grid-gap: 24px;
     grid-auto-flow: dense;
+    @include breakpoint($lg){
+      grid-template-columns: repeat(2, 288px);
+      justify-content: center;
+    }
+    @include breakpoint($sm){
+      display: block;
+    }
 
     .category-top__item {
       position: relative;
@@ -21,22 +28,39 @@
       top: 0;
       transition: all 0.2s linear;
       color: inherit;
+      @include breakpoint($sm){
+        flex-direction: row;
+        align-items: center;
+      }
       &:hover{
         top: -8px;
         box-shadow: 0 4px 8px -2px rgba(0, 17, 61, 0.08);
       }
 
       svg {
+        width: 46px;
+        height: 46px;
+        @include breakpoint($sm){
+          width: 36px;
+          height: 36px;
+        }
         fill: #B5BABF;
         transition: fill 0.2s linear;
       }
       &:hover svg{
         fill: $primary;
       }
-
+      .category-top__header{
+        @include breakpoint($sm){
+          width: 50px;
+        }
+      }
 
       .category-top__content {
         margin-top: 24px;
+        @include breakpoint($sm){
+          margin-top: 0;
+        }
         .category-top__title{
           text-decoration: none;
           color: $grey-1;
@@ -53,6 +77,9 @@
 
       .category-top__footer {
         margin-top: auto;
+        @include breakpoint($sm){
+          display: none;
+        }
         .category-top__expert {
           font-size: 19px;
         }

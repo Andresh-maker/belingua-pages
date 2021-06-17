@@ -1,5 +1,8 @@
 .article-top {
   padding: 72px;
+  @include breakpoint($sm){
+    padding: 0;
+  }
   .container {
     .article-top__title {
       .article-top__h2 {
@@ -9,10 +12,25 @@
     .article-top__list {
       margin-top: 72px;
       display: grid;
-      grid-template-columns: repeat(3, 376px);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: auto;
+      grid-auto-flow: row dense;
       grid-gap: 47px;
+      @include breakpoint($lg){
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include breakpoint($sm){
+        grid-template-columns: 1fr;
+      }
       .article-top__item {
+        &:last-child{
+          @include breakpoint($lg){
+            display: none;
+          }
+          @include breakpoint($sm){
+            display: block;
+          }
+        }
         .article-top__header {
           position: relative;
           .article-top__link_header {

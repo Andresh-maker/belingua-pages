@@ -19,12 +19,13 @@ main{
   max-width: $container;
   width: 100%;
   margin: 0 auto;
-  @include breakpoint($tablet-bp){
-    max-width: $tablet-bp;
+  @include breakpoint($lg){
+    padding: 0 90px;
+    max-width: $lg;
   }
-  @include breakpoint($mobile-bp){
-    padding: 0 15px;
-    max-width: $mobile-bp;
+  @include breakpoint($xs){
+    padding: 0 32px;
+    max-width: $xs;
   }
   &-form{
     &_1{

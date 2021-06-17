@@ -9,6 +9,13 @@ form.forms-language {
     position: relative;
     margin: 8px 8px 0 0;
     overflow: hidden;
+    @include breakpoint($lg){
+      max-width: 49%;
+    }
+    @include breakpoint($sm){
+      max-width: 100%;
+      margin: 4px 0;
+    }
 
     &.dropdown-group{
       position: relative;
@@ -171,4 +178,28 @@ form.form-step {
     }
   }
 }
+form{
+  .form-step__price{
+    display: flex;
+    .form-step__group{
+      max-width: 346px;
+      margin-top: 8px;
+      position: relative;
+      &:last-child{
+        margin-left: 12px;
+      }
+      label{
+        position: absolute;
+        left: 12px;
+        top: 22px;
+        z-index: 2;
+      }
+      i.price{
+
+        top: 22px;
+      }
+    }
+  }
+}
+
 
