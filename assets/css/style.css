@@ -453,6 +453,8 @@ main h4 {
 body {
     font-family: Inter, sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
+    min-width: 375px;
 }
 
 main {
