@@ -33,6 +33,7 @@
         }
         .article-top__header {
           position: relative;
+
           .article-top__link_header {
             display: block;
             text-decoration: none;
@@ -51,8 +52,9 @@
               position: absolute;
               padding: 6px 8px;
               bottom: 12px;
-              left: 21px;
+              left: 12px;
               background: rgba(0, 14, 51, 0.08);
+              border-radius: 4px;
               font-size: 13px;
               font-style: normal;
               font-weight: 600;

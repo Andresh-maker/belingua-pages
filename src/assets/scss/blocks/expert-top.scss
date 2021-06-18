@@ -58,13 +58,14 @@
           }
           .expert__rating{
             background: rgba(0, 14, 51, 0.08);
+            backdrop-filter: blur(4px);
             border-radius: 4px;
-            padding: 8px;
+            padding: 6px 6px 6px 8px;
             display: flex;
             align-items: flex-start;
             position: absolute;
-            bottom: 23px;
-            left: 19px;
+            bottom: 15px;
+            left: 11px;
             z-index: 2;
             .rating-text{
               margin-left: 4px;
@@ -74,7 +75,7 @@
           }
         }
         .expert-top__middle {
-          padding: 19px 24px;
+          padding: 17px 24px;
           a.expert__link {
             text-decoration: none;
             color: $grey-1;

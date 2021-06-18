@@ -3,7 +3,6 @@
   height: 80vh;
   min-height: 600px;
   background: #E8F3F8;
-  overflow: hidden;
   @include breakpoint($lg){
     height: 80vh;
     padding-top: 0;

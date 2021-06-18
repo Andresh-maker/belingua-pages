@@ -1,5 +1,4 @@
 form.forms-language {
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
 
@@ -8,31 +7,125 @@ form.forms-language {
     width: 100%;
     position: relative;
     margin: 8px 8px 0 0;
-    overflow: hidden;
-    @include breakpoint($lg){
+    @include breakpoint($lg) {
       max-width: 49%;
     }
-    @include breakpoint($sm){
+    @include breakpoint($sm) {
       max-width: 100%;
       margin: 4px 0;
     }
-
-    &.dropdown-group{
-      position: relative;
-      input{
-        &.dropdown{
-          padding-left: 12px;
+    input:focus ~ .dropdown-list{
+      opacity: 1;
+      visibility: visible;
+    }
+    .dropdown-list{
+      background: #fff;
+      position: absolute;
+      width: 100%;
+      z-index: 20;
+      bottom: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100%);
+      box-shadow: 0 6px 24px rgba(0, 17, 61, 0.12);
+      border-radius: 4px;
+      max-height: 198px;
+      transition: all .2s linear;
+      .dropdown-list__item{
+        cursor: pointer;
+        position: relative;
+        background: #FFFFFF;
+        padding: 12px 10px;
+        line-height: 24px;
+        @include breakpoint($sm){
+          text-align: left;
         }
-        &.dropdown + label{
-          left: 12px;
+        &.--divider{
+          padding-bottom: 0;
+          &:after{
+            display: block;
+            bottom: 0;
+            left: 0;
+            margin-top: 10px;
+            content: '';
+            background: #D7DADE;
+            height: 1px;
+            width: 100%;
+          }
+        }
+        &:hover{
+          background: #F7F7F8;
+        }
+        span{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          line-height: 24px;
+        }
+        i.dropdown{
+          transform: rotate(-90deg);
+          position: initial;
+          display: inline-flex;
+          @include breakpoint($sm){
+            transform: rotate(0);
+          }
+        }
+        &:hover > .dropdown-list__sub{
+          opacity: 1;
+          visibility: visible;
+          @include breakpoint($sm){
+            display: block;
+          }
+        }
+        .dropdown-list__sub{
+          @include breakpoint($sm){
+            position: initial;
+            display: none;
+            max-height: initial;
+            box-shadow: initial;
+            margin-top: 12px;
+            > .dropdown-list__item{
+              background: #F7F7F8;
+            }
+
+          }
+          opacity: 0;
+          visibility: hidden;
+          max-height: 198px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          box-shadow: 0 6px 24px rgba(0, 17, 61, 0.12);
+          border-radius: 4px;
+          width: 100%;
+          position: absolute;
+          left: 100%;
+          top: 0;
+          z-index: 5;
+          transition: all .2s linear;
         }
       }
+    }
+    &.dropdown-group {
+      position: relative;
 
-      i.dropdown{
-        content: '';
+      i.dropdown {
         position: absolute;
         right: 12px;
-        cursor: pointer;
+        transition: all 0.2s linear;
+      }
+
+      input {
+        &.dropdown {
+          padding-left: 11px;
+        }
+
+        &.dropdown + label {
+          left: 12px;
+        }
+
+        &:focus + label + i.dropdown {
+          transform: rotateX(180deg);
+        }
       }
     }
 
@@ -44,36 +137,45 @@ form.forms-language {
       position: absolute;
       left: 14px;
     }
-    i.Aa, i.union, i.location, i.dropdown{
+
+    i.Aa, i.union, i.location, i.dropdown {
       top: 18px;
     }
 
     input {
-      padding-left: 40px;
+      padding-left: 39px;
       width: 100%;
       height: 56px;
       outline: none;
-      border: none;
+      border: 1px solid transparent;
       font-size: 15px;
       position: relative;
       padding-top: 14px;
       transition: all 80ms linear;
+      border-radius: 4px;
+
       &:focus + label {
-        top: 8px;
+        top: 10px;
         color: $grey-4;
         font-size: 13px;
       }
+
+      &:focus {
+        border: 1px solid $primary;
+      }
     }
+
     label {
       font-size: 15px;
       position: absolute;
       left: 40px;
       top: 21px;
       z-index: 2;
-      transition: all 80ms linear;
+      transition: all 80ms linear .1s;
       color: $grey-3;
+
       &.active {
-        top: 8px;
+        top: 10px;
         color: $grey-4;
         font-size: 13px;
       }
@@ -83,33 +185,40 @@ form.forms-language {
 
 form.form-step {
   width: 100%;
+
   .form-step__group {
     margin-top: 24px;
     position: relative;
-    &.time-group{
+
+    &.time-group {
       max-width: 346px;
     }
+
     &.dropdown-group {
       position: relative;
-      i.dropdown{
+
+      i.dropdown {
         content: '';
         position: absolute;
         right: 12px;
         cursor: pointer;
         top: 38px;
       }
+
       input {
         &.dropdown {
           padding-left: 12px;
         }
       }
     }
-    i:not(.dropdown){
+
+    i:not(.dropdown) {
       position: absolute;
       left: 14px;
       top: 38px;
     }
-    i.time{
+
+    i.time {
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
@@ -118,6 +227,7 @@ form.form-step {
       left: inherit;
       color: #80868E;
     }
+
     label {
       font-size: 13px;
       font-style: normal;
@@ -125,7 +235,8 @@ form.form-step {
       line-height: 16px;
       color: $grey-4;
     }
-    input{
+
+    input {
       padding-left: 40px;
       margin: 8px 0 0px;
       width: 100%;
@@ -135,28 +246,34 @@ form.form-step {
       font-size: 15px;
       position: relative;
       transition: all 80ms linear;
-      &.not_icon{
+
+      &.not_icon {
         padding-left: 12px;
       }
     }
   }
-  .form-step__group_list{
+
+  .form-step__group_list {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
-    label{
+
+    label {
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
       line-height: 24px;
       color: #0C0F17;
     }
-    input{
+
+    input {
       margin-right: 11px;
-      &.other{
+
+      &.other {
         height: 44px;
         outline: none;
         border: none;
@@ -165,36 +282,43 @@ form.form-step {
         width: 322px;
         padding-left: 12px;
       }
-      &[type='radio']{
+
+      &[type='radio'] {
         -webkit-appearance: none;
         border: none;
         width: 17px;
         height: 17px;
         background: url(../images/input/radio_button.png) center center no-repeat;
       }
-      &[type='radio']:checked{
+
+      &[type='radio']:checked {
         background: url(../images/input/radio_checked.png) center center no-repeat;
       }
     }
   }
 }
-form{
-  .form-step__price{
+
+form {
+  .form-step__price {
     display: flex;
-    .form-step__group{
+
+    .form-step__group {
       max-width: 346px;
       margin-top: 8px;
       position: relative;
-      &:last-child{
+
+      &:last-child {
         margin-left: 12px;
       }
-      label{
+
+      label {
         position: absolute;
         left: 12px;
         top: 22px;
         z-index: 2;
       }
-      i.price{
+
+      i.price {
 
         top: 22px;
       }

@@ -46,10 +46,12 @@
             color: $grey-1;
             line-height: 20px;
             font-size: 15px;
-            font-weight: 700;
+            font-weight: 500;
           }
 
           .reviews-top__specialty {
+            display: block;
+            margin-top: 4px;
             color: $grey-4;
             font-size: 13px;
             font-weight: 400;
@@ -58,7 +60,7 @@
         }
 
         .reviews-top__content {
-          margin: 32px 0;
+          margin: 24px 0 20px;
           padding: 8px 12px;
           background: #EEF5FC;
           border-radius: 0px 8px 8px 8px;

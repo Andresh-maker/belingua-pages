@@ -10,3 +10,10 @@ $('.questions__toggle').on('click', function () {
 $('.burger').on('click', function (){
     $(this).toggleClass('active')
 })
+$('.dropdown-list__item').on('click', function (e){
+    e.stopPropagation()
+    let inp = $(this).closest('.forms-language__group').find('input')
+    let label = $(this).closest('.forms-language__group').find('label')
+    label.addClass('active')
+    inp.val($(this).text().trim())
+})

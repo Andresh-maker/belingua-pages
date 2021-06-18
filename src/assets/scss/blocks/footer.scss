@@ -17,6 +17,9 @@ footer#footer.footer {
         @include breakpoint($sm){
           font-size: 48px;
         }
+        @include breakpoint($xs){
+          font-size: 36px;
+        }
       }
 
       .footer__subtitle {
@@ -220,6 +223,9 @@ footer#footer.footer {
           .menu__title {
             color: $grey-1;
             margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 24px;
           }
 
           .menu__item {
