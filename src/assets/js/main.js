@@ -15,5 +15,5 @@ $('.dropdown-list__item').on('click', function (e){
     let inp = $(this).closest('.forms-language__group').find('input')
     let label = $(this).closest('.forms-language__group').find('label')
     label.addClass('active')
-    inp.val($(this).text().trim())
+    inp.val($(this).find('span').first().text().trim())
 })

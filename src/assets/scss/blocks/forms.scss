@@ -35,8 +35,10 @@ form.forms-language {
         cursor: pointer;
         position: relative;
         background: #FFFFFF;
-        padding: 12px 10px;
         line-height: 24px;
+        span{
+          padding: 12px 10px;
+        }
         @include breakpoint($sm){
           text-align: left;
         }
@@ -84,10 +86,6 @@ form.forms-language {
             max-height: initial;
             box-shadow: initial;
             margin-top: 12px;
-            > .dropdown-list__item{
-              background: #F7F7F8;
-            }
-
           }
           opacity: 0;
           visibility: hidden;

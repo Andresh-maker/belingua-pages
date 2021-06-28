@@ -20,10 +20,12 @@ const content = $('.form-step__content')
 
 $('.step-element__btn > .next').on('click', function () {
     stepSlider.slideNext()
+    $('html, body').animate({scrollTop: 0},500);
 })
 
 $('.step-element__btn > .prev').on('click', function () {
     stepSlider.slidePrev()
+    $('html, body').animate({scrollTop: 0},500);
 })
 
 tabs.on('click', toggleTab)

@@ -50,6 +50,3 @@ function timerSlider(elem) {
     }, 10);
 }
 
-// sliderContent.destroy(true, true)
-// sliderInfo.destroy(true, true)
-
