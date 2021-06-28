@@ -1020,8 +1020,11 @@ form.forms-language .forms-language__group .dropdown-list .dropdown-list__item {
     cursor: pointer;
     position: relative;
     background: #FFFFFF;
-    padding: 12px 10px;
     line-height: 24px;
+}
+
+form.forms-language .forms-language__group .dropdown-list .dropdown-list__item span {
+    padding: 12px 10px;
 }
 
 @media screen and (max-width: 991px) {
@@ -1108,10 +1111,6 @@ form.forms-language .forms-language__group .dropdown-list .dropdown-list__item .
         max-height: initial;
         box-shadow: initial;
         margin-top: 12px;
-    }
-
-    form.forms-language .forms-language__group .dropdown-list .dropdown-list__item .dropdown-list__sub > .dropdown-list__item {
-        background: #F7F7F8;
     }
 }
 
