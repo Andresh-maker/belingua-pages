@@ -37,3 +37,7 @@ function toggleTab() {
     content.hide()
     $(contentIdx).show()
 }
+
+$('.time-group > input').on('input', function (){
+    $(this).val($(this).val().replace(/[^\d]/g, ''))
+})
